@@ -1,9 +1,9 @@
 @echo off
 
 :: --- SELF-UPDATE SECTION ---
-set "myscript=%~f0"
-set "updatefile=%TEMP%\update_PoE2_filter.cmd"
-set "updateurl=https://raw.githubusercontent.com/pkajan/PoE2-filter/refs/heads/main/update_PoE2_filter.cmd"
+SET "myscript=%~f0"
+SET "updatefile=%TEMP%\update_PoE2_filter.cmd"
+SET "updateurl=https://raw.githubusercontent.com/pkajan/PoE2-filter/refs/heads/main/update_PoE2_filter.cmd"
 
 curl -s -L "%updateurl%" -o "%updatefile%"
 
@@ -32,21 +32,26 @@ if not exist "%userprofile%\Documents\My Games\Path of Exile 2" (
     mkdir "%userprofile%\Documents\My Games\Path of Exile 2"
 )
 
-:: URLs NeverSink
-SET "0-SOFT=https://raw.githubusercontent.com/NeverSinkDev/NeverSink-Filter-for-PoE2/refs/heads/main/(STYLE)%%20DARKMODE/NeverSink's%%20filter%%202%%20-%%200-SOFT%%20(darkmode)%%20.filter"
-SET "1-REGULAR=https://raw.githubusercontent.com/NeverSinkDev/NeverSink-Filter-for-PoE2/refs/heads/main/(STYLE)%%20DARKMODE/NeverSink's%%20filter%%202%%20-%%201-REGULAR%%20(darkmode)%%20.filter"
-SET "2-SEMISTRICT=https://raw.githubusercontent.com/NeverSinkDev/NeverSink-Filter-for-PoE2/refs/heads/main/(STYLE)%%20DARKMODE/NeverSink's%%20filter%%202%%20-%%202-SEMI-STRICT%%20(darkmode)%%20.filter"
-SET "3-STRICT=https://raw.githubusercontent.com/NeverSinkDev/NeverSink-Filter-for-PoE2/refs/heads/main/(STYLE)%%20DARKMODE/NeverSink's%%20filter%%202%%20-%%203-STRICT%%20(darkmode)%%20.filter"
-SET "4-VERYSTRICT=https://raw.githubusercontent.com/NeverSinkDev/NeverSink-Filter-for-PoE2/refs/heads/main/(STYLE)%%20DARKMODE/NeverSink's%%20filter%%202%%20-%%204-VERY-STRICT%%20(darkmode)%%20.filter"
-SET "5-UBERSTRICT=https://raw.githubusercontent.com/NeverSinkDev/NeverSink-Filter-for-PoE2/refs/heads/main/(STYLE)%%20DARKMODE/NeverSink's%%20filter%%202%%20-%%205-UBER-STRICT%%20(darkmode)%%20.filter"
-SET "6-UBERPLUSSTRICT=https://raw.githubusercontent.com/NeverSinkDev/NeverSink-Filter-for-PoE2/refs/heads/main/(STYLE)%%20DARKMODE/NeverSink's%%20filter%%202%%20-%%206-UBER-PLUS-STRICT%%20(darkmode)%%20.filter"
+:: URL Greatest Filter of Them All
+SET "GFoTA=https://raw.githubusercontent.com/pkajan/PoE2-filter/refs/heads/main/GFoTA.filter"
 
-:: Default = 0-SOFT
-set "choice=0-SOFT"
+:: URLs NeverSink
+SET "CHOICE0=https://raw.githubusercontent.com/NeverSinkDev/NeverSink-Filter-for-PoE2/refs/heads/main/(STYLE)%%20DARKMODE/NeverSink's%%20filter%%202%%20-%%200-SOFT%%20(darkmode)%%20.filter"
+SET "CHOICE1=https://raw.githubusercontent.com/NeverSinkDev/NeverSink-Filter-for-PoE2/refs/heads/main/(STYLE)%%20DARKMODE/NeverSink's%%20filter%%202%%20-%%201-REGULAR%%20(darkmode)%%20.filter"
+SET "CHOICE2=https://raw.githubusercontent.com/NeverSinkDev/NeverSink-Filter-for-PoE2/refs/heads/main/(STYLE)%%20DARKMODE/NeverSink's%%20filter%%202%%20-%%202-SEMI-STRICT%%20(darkmode)%%20.filter"
+SET "CHOICE3=https://raw.githubusercontent.com/NeverSinkDev/NeverSink-Filter-for-PoE2/refs/heads/main/(STYLE)%%20DARKMODE/NeverSink's%%20filter%%202%%20-%%203-STRICT%%20(darkmode)%%20.filter"
+SET "CHOICE4=https://raw.githubusercontent.com/NeverSinkDev/NeverSink-Filter-for-PoE2/refs/heads/main/(STYLE)%%20DARKMODE/NeverSink's%%20filter%%202%%20-%%204-VERY-STRICT%%20(darkmode)%%20.filter"
+SET "CHOICE5=https://raw.githubusercontent.com/NeverSinkDev/NeverSink-Filter-for-PoE2/refs/heads/main/(STYLE)%%20DARKMODE/NeverSink's%%20filter%%202%%20-%%205-UBER-STRICT%%20(darkmode)%%20.filter"
+SET "CHOICE6=https://raw.githubusercontent.com/NeverSinkDev/NeverSink-Filter-for-PoE2/refs/heads/main/(STYLE)%%20DARKMODE/NeverSink's%%20filter%%202%%20-%%206-UBER-PLUS-STRICT%%20(darkmode)%%20.filter"
+
+:: Default = GFoTA
+SET "choice=GFoTA"
+SET "filterFileName=GFoTA"
 
 :: Optional: ask user for choice
 echo.
-echo Choose filter (default = SOFT):
+echo Choose filter (default = GFoTA):
+echo   T = Greatest Filter of Them All
 echo   0 = SOFT
 echo   1 = REGULAR
 echo   2 = SEMI-STRICT
@@ -54,29 +59,31 @@ echo   3 = STRICT
 echo   4 = VERY-STRICT
 echo   5 = UBER-STRICT
 echo   6 = UBER-PLUS-STRICT
-set /p userchoice=Enter number [0-6, Enter = default]: 
+SET /p userchoice=Enter number [T, 0-6, Enter = default]: 
 
 if not "%userchoice%"=="" (
-    if "%userchoice%"=="0" set "choice=0-SOFT"
-    if "%userchoice%"=="1" set "choice=1-REGULAR"
-    if "%userchoice%"=="2" set "choice=2-SEMISTRICT"
-    if "%userchoice%"=="3" set "choice=3-STRICT"
-    if "%userchoice%"=="4" set "choice=4-VERYSTRICT"
-    if "%userchoice%"=="5" set "choice=5-UBERSTRICT"
-    if "%userchoice%"=="6" set "choice=6-UBERPLUSSTRICT"
+    if "%userchoice%"=="0" SET "choice=CHOICE0" & SET "filterFileName=NeverSinks_Dark"
+    if "%userchoice%"=="1" SET "choice=CHOICE1" & SET "filterFileName=NeverSinks_Dark"
+    if "%userchoice%"=="2" SET "choice=CHOICE2" & SET "filterFileName=NeverSinks_Dark"
+    if "%userchoice%"=="3" SET "choice=CHOICE3" & SET "filterFileName=NeverSinks_Dark"
+    if "%userchoice%"=="4" SET "choice=CHOICE4" & SET "filterFileName=NeverSinks_Dark"
+    if "%userchoice%"=="5" SET "choice=CHOICE5" & SET "filterFileName=NeverSinks_Dark"
+    if "%userchoice%"=="6" SET "choice=CHOICE6" & SET "filterFileName=NeverSinks_Dark"
+
+    if /I "%userchoice%"=="T" SET "choice=GFoTA" & SET "filterFileName=GFoTA"
 )
 
 :: Resolve URL
-set "selectedURL=!%choice%!"
+SET "selectedURL=!%choice%!"
 
 :: File names
-set "tempFile=%TEMP%\NeverSinks_Dark.filter"
-set "poe2_path_onedrive=%userprofile%\OneDrive\Documents\My Games\Path of Exile 2\NeverSinks_Dark.filter"
-set "poe2_path_plebs=%userprofile%\Documents\My Games\Path of Exile 2\NeverSinks_Dark.filter"
+SET "tempFile=%TEMP%\%filterFileName%.filter"
+SET "poe2_path_onedrive=%userprofile%\OneDrive\Documents\My Games\Path of Exile 2\%filterFileName%.filter"
+SET "poe2_path_plebs=%userprofile%\Documents\My Games\Path of Exile 2\%filterFileName%.filter"
 
 echo.
 echo Downloading %choice%:
-::@echo   %selectedURL%
+::@echo   !selectedURL!
 
 curl -L "%selectedURL%" -o "%tempFile%"
 
