@@ -53,7 +53,10 @@ SET "filterLabel=Greatest Filter of Them All"
 :: Optional: ask user for choice
 echo.
 echo Choose filter (default = GFoTA):
+echo.
 echo   T = Greatest Filter of Them All
+echo.
+echo   NeverSink:
 echo   0 = SOFT
 echo   1 = REGULAR
 echo   2 = SEMI-STRICT
