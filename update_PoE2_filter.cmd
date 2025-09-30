@@ -3,8 +3,7 @@
 :: --- SELF-UPDATE SECTION ---
 SET "myscript=%~f0"
 SET "updatefile=%TEMP%\update_PoE2_filter.cmd"
-SET "updateurl2=https://raw.githubusercontent.com/pkajan/PoE2-filter/refs/heads/main/update_PoE2_filter.cmd"
-SET "updateurl=https://tmp.pkajan.eu/update_PoE2_filter.cmd"
+SET "updateurl=https://raw.githubusercontent.com/pkajan/PoE2-filter/refs/heads/main/update_PoE2_filter.cmd"
 
 curl -s -L "%updateurl%" -o "%updatefile%"
 
