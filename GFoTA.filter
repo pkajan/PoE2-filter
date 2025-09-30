@@ -6,7 +6,7 @@
 # VERSION:       2.5
 # AUTHOR:        pKajan
 # CONTACT:       
-# LINK:          
+# LINK:          https://raw.githubusercontent.com/pkajan/PoE2-filter/refs/heads/main/GFoTA.filter
 #
 #===============================================================================
 
@@ -18,24 +18,8 @@
 #===============================================================================
 
 Show
-	BaseType = "Divine Vessel" "Offering to the Goddess"
-	SetTextColor 255 200 0 255
-	SetBackgroundColor 0 0 0 240
-	SetBorderColor 255 255 255 255
-	SetFontSize 45
-	MinimapIcon 1 Yellow UpsideDownHouse
-	PlayEffect Yellow 
-
-Show
-	BaseType = "Sacrifice at"
-	SetTextColor 210 0 0 255
-	SetBackgroundColor 0 0 0 240
-	SetFontSize 30
-	MinimapIcon 2 Red Star
-
-Show
 	Rarity = Unique
-	Class = "Map"
+	Class = "Waystone"
 	SetTextColor 255 255 255 255
 	SetBackgroundColor 14 186 255 240
 	SetBorderColor 255 40 0 255
@@ -45,37 +29,16 @@ Show
 	PlayEffect Blue 
 
 Show
-	Class = "Map" "Map Fragment" "Misc Map Item"
+	Class = "Waystone" "Map Fragment" "Misc Map Item"
 	SetTextColor 255 255 255 255
 	SetBackgroundColor 14 186 255 240
 	SetFontSize 35
 	PlayAlertSound 1 50
 	MinimapIcon 0 Blue Triangle
 
-Show
-	Class = "Currency"
-	BaseType = "Report"
-	SetTextColor 38 0 86 255
-	SetBackgroundColor 192 128 254 240
-	SetFontSize 35
-	PlayAlertSound 1 50
-	MinimapIcon 2 Pink Circle
-
 #===============================================================================
 # Section: Currency
 #===============================================================================
-
-#-------------------------------------------------------------------------------
-# Subsection: Divination cards
-#-------------------------------------------------------------------------------
-
-Show
-	Class = "Divination Card"
-	SetTextColor 0 0 0 255
-	SetBackgroundColor 30 145 255 240
-	SetFontSize 35
-	PlayAlertSound 4 100
-	MinimapIcon 0 Blue Square
 
 #-------------------------------------------------------------------------------
 # Subsection: Blight & Ancestor & Betrayal
@@ -87,13 +50,6 @@ Show
 	SetTextColor 42 42 42 255
 	SetBackgroundColor 254 128 128 240
 	MinimapIcon 2 Pink Circle
-
-Show
-	HasExplicitMod = "Veil" "of the Veil"
-	SetTextColor 200 200 200 255
-	SetBackgroundColor 86 0 0 240
-	SetBorderColor 254 254 153 255
-	SetFontSize 35
 
 #-------------------------------------------------------------------------------
 # Subsection: Delirium & Breach & Delve & Harbinger
@@ -108,17 +64,25 @@ Show
 	MinimapIcon 2 Yellow Circle
 
 #-------------------------------------------------------------------------------
-# Subsection: Essence
+# Subsection: Essence & Runes
 #-------------------------------------------------------------------------------
 
 Show
 	Class = "Stackable Currency"
-	BaseType = "essence "
+	BaseType = "essence " "Rune"
 	SetTextColor 175 96 37 255
 	SetBackgroundColor 0 0 0 240
 	SetBorderColor 136 136 255 255
 	MinimapIcon 2 Purple Cross
 
+
+Show
+	BaseType = "Rune"
+	SetTextColor 175 96 37 255
+	SetBackgroundColor 0 0 0 240
+	SetBorderColor 136 136 255 255
+	MinimapIcon 2 Purple Cross
+	
 #-------------------------------------------------------------------------------
 # Subsection: Heist & Expedition
 #-------------------------------------------------------------------------------
@@ -130,52 +94,6 @@ Show
 	SetBackgroundColor 200 200 200 240
 	SetBorderColor 255 255 255 255
 	MinimapIcon 2 White Circle
-
-Show
-	Class = "Blueprint" "Contract" "Trinket"
-	SetTextColor 0 0 0 255
-	SetBackgroundColor 200 200 200 240
-	SetBorderColor 255 255 255 255
-	MinimapIcon 2 White Circle
-
-Show
-	Class = "Heist Brooch" "Heist Cloak" "Heist Gear" "Heist Tool" "Heist Target"
-	SetTextColor 0 0 0 255
-	SetBackgroundColor 200 200 200 240
-	SetBorderColor 255 255 255 255
-	SetFontSize 40
-	MinimapIcon 1 White Circle
-	PlayEffect White 
-
-#-------------------------------------------------------------------------------
-# Subsection: Incursion & Labirinth
-#-------------------------------------------------------------------------------
-
-Show
-	Class = "Stackable Currency"
-	BaseType = "Vial of"
-	BaseType == "Vial of Awakening" "Vial of Dominance" "Vial of Fate" "Vial of Sacrifice" "Vial of Summoning" "Vial of Transcendence" "Vial of the Ritual"
-	SetTextColor 124 81 50 255
-	SetBackgroundColor 239 254 128 240
-	MinimapIcon 2 Green Circle
-	PlayEffect Grey 
-
-Show
-	BaseType = "Stone of Passage"
-	SetTextColor 255 255 255 255
-	SetBackgroundColor 150 0 0 240
-	SetBorderColor 175 96 37 255
-	SetFontSize 45
-	PlayAlertSound 6 80
-	MinimapIcon 0 Red Circle
-	PlayEffect White 
-
-Show
-	BaseType = "Silver Key"
-	SetTextColor 255 200 0 255
-	SetBackgroundColor 150 0 0 240
-	SetBorderColor 255 200 0 255
-	SetFontSize 35
 
 #-------------------------------------------------------------------------------
 # Subsection: Tainted & Legion & Ritual & Ultimatum & Sanctum
@@ -198,6 +116,17 @@ Show
 	SetFontSize 40
 	MinimapIcon 2 Brown Circle
 
+#-------------------------------------------------------------------------------
+# Subsection: Gems
+#-------------------------------------------------------------------------------
+
+Show
+	Class = "Gem"
+	SetBorderColor 255 215 0 255
+	SetFontSize 45
+	DisableDropSound
+	MinimapIcon 0 Cyan Hexagon
+	
 #-------------------------------------------------------------------------------
 # Subsection: Basic
 #-------------------------------------------------------------------------------
@@ -258,16 +187,6 @@ Show
 
 Show
 	Class = "Currency"
-	BaseType = "eldritch ember" "eldritch ichor"
-	SetTextColor 0 0 0 255
-	SetBackgroundColor 250 150 25 240
-	SetBorderColor 184 218 242 255
-	SetFontSize 45
-	PlayAlertSound 6 80
-	MinimapIcon 2 Orange Circle
-
-Show
-	Class = "Currency"
 	BaseType = "Blessed Orb" "Chromatic Orb" "Enkindling Orb" "Gemcutter's Prism" "Instilling Orb" "Jeweller's Orb" "Orb of Alchemy" "Orb of Annulment" "Orb of Binding" "Orb of Fusing" "Orb of Horizons" "Orb of Regret" "Orb of Scouring" "Orb of Unmaking" "Regal Orb" "Vaal Orb"
 	SetTextColor 0 0 0 255
 	SetBackgroundColor 250 150 25 240
@@ -285,37 +204,25 @@ Show
 	MinimapIcon 2 Brown Hexagon
 
 Show
-	Class = "Incubator"
-	SetTextColor 255 255 255 255
-	SetBackgroundColor 150 0 0 240
-	SetBorderColor 0 0 0 255
-	SetFontSize 45
-	PlayAlertSound 1 80
-	MinimapIcon 1 Red Circle
-	PlayEffect Red 
-
-Show
-	Class = "Currency"
-	BaseType = "Portal Scroll"
-	SetBackgroundColor 0 0 0 240
-	SetBorderColor 54 100 146 255
-	SetFontSize 35
-	MinimapIcon 2 Blue UpsideDownHouse
-
-Show
 	Class = "Currency"
 	BaseType = "Scroll of Wisdom"
 	SetBackgroundColor 0 0 0 240
 	SetBorderColor 100 50 30 255
 	SetFontSize 35
-	MinimapIcon 2 Brown UpsideDownHouse
+
+#-------------------------------------------------------------------------------
+# Subsection: Gold
+#-------------------------------------------------------------------------------
 
 Show
-	Class = "Currency"
+	StackSize >= 500
+	BaseType == "Gold"
 	SetTextColor 0 0 0 255
-	SetBackgroundColor 254 191 128 240
+	SetBackgroundColor 255 215 0 240
 	SetBorderColor 180 96 0 255
-	MinimapIcon 0 Brown Moon
+	SetFontSize 30
+	MinimapIcon 0 Yellow Moon
+	PlayEffect Yellow 
 
 Show
 	StackSize >= 250
@@ -323,7 +230,7 @@ Show
 	SetTextColor 0 0 0 255
 	SetBackgroundColor 255 215 0 240
 	SetBorderColor 180 96 0 255
-	SetFontSize 35
+	SetFontSize 25
 	MinimapIcon 0 Yellow Moon
 	PlayEffect Yellow 
 
@@ -333,7 +240,7 @@ Show
 	SetTextColor 0 0 0 255
 	SetBackgroundColor 255 215 0 240
 	SetBorderColor 180 96 0 255
-	SetFontSize 25
+	SetFontSize 20
 	MinimapIcon 1 Yellow Moon
 	PlayEffect Yellow 
 
@@ -343,9 +250,16 @@ Show
 	SetTextColor 0 0 0 255
 	SetBackgroundColor 255 215 0 240
 	SetBorderColor 180 96 0 255
-	SetFontSize 20
+	SetFontSize 17
 	MinimapIcon 2 Yellow Moon
 	PlayEffect Yellow 
+
+Show
+	Class = "Currency"
+	SetTextColor 0 0 0 255
+	SetBackgroundColor 254 191 128 240
+	SetBorderColor 180 96 0 255
+	MinimapIcon 0 Brown Moon
 
 #-------------------------------------------------------------------------------
 # Subsection: QUEST
@@ -379,42 +293,9 @@ Show
 	PlayEffect Yellow 
 
 #-------------------------------------------------------------------------------
-# Subsection: 6-sockets & stuff
-#-------------------------------------------------------------------------------
-
-Show
-	LinkedSockets = 6
-	SetTextColor 255 207 32 255
-	SetBackgroundColor 73 17 138 200
-	SetBorderColor 0 0 0 255
-	SetFontSize 45
-	PlayAlertSound 8 100
-	MinimapIcon 0 Green Diamond
-	PlayEffect Green 
-
-Show
-	Sockets = "6"
-	SetTextColor 0 0 0 255
-	SetBackgroundColor 255 215 0 240
-	SetBorderColor 210 0 0 255
-	SetFontSize 45
-	PlayAlertSound 10 80
-	MinimapIcon 1 Yellow Circle
-	PlayEffect Yellow 
-
-Show
-	LinkedSockets = 5
-	SetTextColor 255 207 32 170
-	SetBackgroundColor 73 17 138 100
-	SetBorderColor 0 0 0 255
-	SetFontSize 30
-	MinimapIcon 2 Green Diamond
-
-#-------------------------------------------------------------------------------
 # Subsection: Jewels
 #-------------------------------------------------------------------------------
 
-# -------------------------------------------------------------------------------
 Show
 	Rarity > Magic
 	BaseType = "Jewel"
@@ -439,132 +320,18 @@ Show
 
 Show
 	Rarity > Magic
-	Class = "Jewel" "Abyss Jewel"
+	Class = "Jewel"
 	SetTextColor 210 0 0 255
 	SetBackgroundColor 255 215 0 240
 	MinimapIcon 1 Yellow Kite
 
 Show
 	Rarity <= Magic
-	Class = "Jewel" "Abyss Jewel"
+	Class = "Jewel"
 	SetTextColor 210 0 0 255
 	SetBackgroundColor 184 218 242 240
 	SetBorderColor 0 128 0 255
 	SetFontSize 25
-
-#-------------------------------------------------------------------------------
-# Subsection: CHANCE-ble items
-#-------------------------------------------------------------------------------
-
-Show
-	BaseWard >= 1
-	SetTextColor 255 255 255 255
-	SetBackgroundColor 98 128 0 240
-	SetBorderColor 124 81 50 255
-	SetFontSize 45
-	MinimapIcon 0 Grey Circle
-	PlayEffect Green 
-
-#-------------------------------------------------------------------------------
-# Subsection: Chaos Recipe
-#-------------------------------------------------------------------------------
-
-# -------------------------------------------------------------------------------
-Show
-	Identified = False
-	ItemLevel >= 60
-	ItemLevel <= 74
-	Rarity = Rare
-	Class = "Amulet" "Ring"
-	SetTextColor 14 186 255 255
-	SetBackgroundColor 255 215 0 240
-	SetBorderColor 30 144 255 240
-	SetFontSize 25
-
-Show
-	Identified = False
-	ItemLevel >= 60
-	ItemLevel <= 74
-	Rarity = Rare
-	Class = "Belts"
-	SetTextColor 102 102 255 255
-	SetBackgroundColor 255 215 0 240
-	SetBorderColor 136 136 255 240
-	SetFontSize 25
-
-Show
-	Identified = False
-	ItemLevel >= 60
-	ItemLevel <= 74
-	Rarity = Rare
-	Height <= 3
-	Width <= 2
-	Class = "Boots"
-	SetTextColor 38 0 86 255
-	SetBackgroundColor 255 215 0 240
-	SetBorderColor 30 144 255 240
-	SetFontSize 25
-
-Show
-	Identified = False
-	ItemLevel >= 60
-	ItemLevel <= 74
-	Rarity = Rare
-	Height <= 3
-	Width <= 2
-	Class = "Helmets"
-	SetTextColor 38 0 86 255
-	SetBackgroundColor 255 215 0 240
-	SetBorderColor 86 0 0 240
-	SetFontSize 25
-
-Show
-	Identified = False
-	ItemLevel >= 60
-	ItemLevel <= 74
-	Rarity = Rare
-	Height <= 3
-	Width <= 2
-	Class = "Gloves"
-	SetTextColor 38 0 86 255
-	SetBackgroundColor 255 215 0 240
-	SetBorderColor 254 128 222 240
-	SetFontSize 25
-
-Show
-	Identified = False
-	ItemLevel >= 60
-	ItemLevel <= 74
-	Rarity = Rare
-	Height <= 3
-	Width <= 1
-	Class = "One Hand Axes" "One Hand Maces" "One Hand Swords" "Dagger" "Wand"
-	SetTextColor 38 0 86 255
-	SetBackgroundColor 255 215 0 240
-	SetBorderColor 86 0 0 240
-	SetFontSize 25
-
-Show
-	Identified = False
-	ItemLevel >= 60
-	ItemLevel <= 74
-	Rarity = Rare
-	Class = "Body Armours"
-	SetTextColor 38 0 86 255
-	SetBackgroundColor 255 215 0 240
-	SetBorderColor 86 0 0 240
-	SetFontSize 25
-
-Show
-	Identified = False
-	ItemLevel >= 60
-	ItemLevel <= 74
-	Rarity = Rare
-	Class = "Two Hand Axes" "Two Hand Maces" "Two Hand Swords" "Staves" "Shields" "Bows" "Sceptre" "One Hand Axe" "One Hand Mace" "One Hand Sword" "Quiver" "Claw"
-	SetTextColor 38 0 86 200
-	SetBackgroundColor 255 215 0 100
-	SetBorderColor 86 0 0 100
-	SetFontSize 18
 
 #-------------------------------------------------------------------------------
 # Subsection: Sockets & Quality
@@ -598,7 +365,7 @@ Show
 	AreaLevel < 10
 	ItemLevel < 8
 	Rarity = Magic
-	Class = "Boots" "Gloves" "Helmets" "Rings" "Amulets" "One Hand Axes" "Two Hand Axes" "One Hand Maces" "Two Hand Maces" "One Hand Swords" "Two Hand Swords" "Wands" "Claws" "Staves" "Belts" "Sceptres" "Shields" "Bows" "Daggers" "Quivers" "Body Armours"
+	Class = "Boots" "Gloves" "Helmets" "Rings" "Amulets" "One Hand Axes" "Two Hand Axes" "One Hand Maces" "Two Hand Maces" "One Hand Swords" "Two Hand Swords" "Wands" "Claws" "Staves" "Belts" "Sceptres" "Shields" "Bows" "Daggers" "Quivers" "Body Armours" "Spear" "Crossbow" "Quarterstaff" "Buckler" "Focus"
 	SetBackgroundColor 138 132 132 63
 	SetBorderColor 184 218 242 255
 	SetFontSize 22
@@ -607,10 +374,21 @@ Show
 	AreaLevel < 10
 	ItemLevel < 6
 	Rarity = Normal
-	Class = "Boots" "Gloves" "Helmets" "Rings" "Amulets" "One Hand Axes" "Two Hand Axes" "One Hand Maces" "Two Hand Maces" "One Hand Swords" "Two Hand Swords" "Wands" "Claws" "Staves" "Belts" "Sceptres" "Shields" "Bows" "Daggers" "Quivers" "Body Armours"
+	Class = "Boots" "Gloves" "Helmets" "Rings" "Amulets" "One Hand Axes" "Two Hand Axes" "One Hand Maces" "Two Hand Maces" "One Hand Swords" "Two Hand Swords" "Wands" "Claws" "Staves" "Belts" "Sceptres" "Shields" "Bows" "Daggers" "Quivers" "Body Armours" "Spear" "Crossbow" "Quarterstaff" "Buckler" "Focus"
 	SetBackgroundColor 138 132 132 63
 	SetBorderColor 184 218 242 255
 	SetFontSize 22
+
+#-------------------------------------------------------------------------------
+# Subsection: Charms
+#-------------------------------------------------------------------------------
+
+Show
+	Class = "Charm"
+	SetTextColor 255 200 0 255
+	SetBackgroundColor 0 0 0 240
+	SetBorderColor 210 0 0 255
+	DisableDropSound
 
 #-------------------------------------------------------------------------------
 # Subsection: FLASKS
@@ -742,7 +520,7 @@ Show
 
 Hide
 	Rarity <= Magic
-	Class = "Boots" "Gloves" "Helmets" "Rings" "Amulets" "One Hand Axes" "Two Hand Axes" "One Hand Maces" "Two Hand Maces" "One Hand Swords" "Two Hand Swords" "Wands" "Claws" "Staves" "Belts" "Sceptres" "Shields" "Bows" "Daggers" "Quivers" "Body Armours" "Spear" "Crossbow" "Quarterstaff"
+	Class = "Boots" "Gloves" "Helmets" "Rings" "Amulets" "One Hand Axes" "Two Hand Axes" "One Hand Maces" "Two Hand Maces" "One Hand Swords" "Two Hand Swords" "Wands" "Claws" "Staves" "Belts" "Sceptres" "Shields" "Bows" "Daggers" "Quivers" "Body Armours" "Spear" "Crossbow" "Quarterstaff" "Buckler" "Focus"
 	SetFontSize 18
 	DisableDropSound
 
