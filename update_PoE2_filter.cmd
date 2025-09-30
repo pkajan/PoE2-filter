@@ -3,7 +3,8 @@
 :: --- SELF-UPDATE SECTION ---
 SET "myscript=%~f0"
 SET "updatefile=%TEMP%\update_PoE2_filter.cmd"
-SET "updateurl=https://raw.githubusercontent.com/pkajan/PoE2-filter/refs/heads/main/update_PoE2_filter.cmd"
+SET "updateurl2=https://raw.githubusercontent.com/pkajan/PoE2-filter/refs/heads/main/update_PoE2_filter.cmd"
+SET "updateurl=https://tmp.pkajan.eu/update_PoE2_filter.cmd"
 
 curl -s -L "%updateurl%" -o "%updatefile%"
 
@@ -47,6 +48,7 @@ SET "CHOICE6=https://raw.githubusercontent.com/NeverSinkDev/NeverSink-Filter-for
 :: Default = GFoTA
 SET "choice=GFoTA"
 SET "filterFileName=GFoTA"
+SET "filterLabel=Greatest Filter of Them All"
 
 :: Optional: ask user for choice
 echo.
@@ -62,15 +64,46 @@ echo   6 = UBER-PLUS-STRICT
 SET /p userchoice=Enter number [T, 0-6, Enter = default]: 
 
 if not "%userchoice%"=="" (
-    if "%userchoice%"=="0" SET "choice=CHOICE0" & SET "filterFileName=NeverSinks_Dark"
-    if "%userchoice%"=="1" SET "choice=CHOICE1" & SET "filterFileName=NeverSinks_Dark"
-    if "%userchoice%"=="2" SET "choice=CHOICE2" & SET "filterFileName=NeverSinks_Dark"
-    if "%userchoice%"=="3" SET "choice=CHOICE3" & SET "filterFileName=NeverSinks_Dark"
-    if "%userchoice%"=="4" SET "choice=CHOICE4" & SET "filterFileName=NeverSinks_Dark"
-    if "%userchoice%"=="5" SET "choice=CHOICE5" & SET "filterFileName=NeverSinks_Dark"
-    if "%userchoice%"=="6" SET "choice=CHOICE6" & SET "filterFileName=NeverSinks_Dark"
-
-    if /I "%userchoice%"=="T" SET "choice=GFoTA" & SET "filterFileName=GFoTA"
+    if "%userchoice%"=="0" (
+        SET "choice=CHOICE0"
+        SET "filterFileName=NeverSinks_Dark"
+        SET "filterLabel=SOFT"
+    )
+    if "%userchoice%"=="1" (
+        SET "choice=CHOICE1"
+        SET "filterFileName=NeverSinks_Dark"
+        SET "filterLabel=REGULAR"
+    )
+    if "%userchoice%"=="2" (
+        SET "choice=CHOICE2"
+        SET "filterFileName=NeverSinks_Dark"
+        SET "filterLabel=SEMI-STRICT"
+    )
+    if "%userchoice%"=="3" (
+        SET "choice=CHOICE3"
+        SET "filterFileName=NeverSinks_Dark"
+        SET "filterLabel=STRICT"
+    )
+    if "%userchoice%"=="4" (
+        SET "choice=CHOICE4"
+        SET "filterFileName=NeverSinks_Dark"
+        SET "filterLabel=VERY-STRICT"
+    )
+    if "%userchoice%"=="5" (
+        SET "choice=CHOICE5"
+        SET "filterFileName=NeverSinks_Dark"
+        SET "filterLabel=UBER-STRICT"
+    )
+    if "%userchoice%"=="6" (
+        SET "choice=CHOICE6"
+        SET "filterFileName=NeverSinks_Dark"
+        SET "filterLabel=UBER-PLUS-STRICT"
+    )
+    if /I "%userchoice%"=="T" (
+        SET "choice=GFoTA"
+        SET "filterFileName=GFoTA"
+        SET "filterLabel=Greatest Filter of Them All"
+    )
 )
 
 :: Resolve URL
@@ -98,6 +131,6 @@ copy "%tempFile%" "%poe2_path_plebs%" /y > nul
 del /q "%tempFile%"
 
 echo.
-echo Done! Installed filter: %choice%
+echo Done! Installed filter: %filterLabel%
 pause
 
