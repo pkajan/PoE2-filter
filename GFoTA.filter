@@ -1,17 +1,33 @@
 #===============================================================================
-# GFoTA
+# GREATEST FILTER OF THEM ALL
 #===============================================================================
 #
 # NAME:          Greatest Filter of Them All
-# VERSION:       2.5
+# VERSION:       2.6
 # AUTHOR:        pKajan
 # CONTACT:       
 # LINK:          https://raw.githubusercontent.com/pkajan/PoE2-filter/refs/heads/main/GFoTA.filter
 #
+#
 #===============================================================================
 
 
 
+
+#===============================================================================
+# Section: Uniq
+#===============================================================================
+
+# ===============================================================================
+Show
+	Rarity = Unique
+	SetTextColor 255 200 0 255
+	SetBackgroundColor 0 0 0 240
+	SetBorderColor 210 0 0 255
+	SetFontSize 45
+	PlayAlertSound 1 80
+	MinimapIcon 0 Yellow Star
+	PlayEffect Yellow 
 
 #===============================================================================
 # Section: Maps
@@ -68,21 +84,21 @@ Show
 #-------------------------------------------------------------------------------
 
 Show
-	Class = "Stackable Currency"
-	BaseType = "essence " "Rune"
+	Class == "Stackable Currency"
+	BaseType = "Essence"
 	SetTextColor 175 96 37 255
 	SetBackgroundColor 0 0 0 240
 	SetBorderColor 136 136 255 255
 	MinimapIcon 2 Purple Cross
-
 
 Show
-	BaseType = "Rune"
+	Class == "Socketable"
+	BaseType = "Rune" "Soul Core" "Talisman"
 	SetTextColor 175 96 37 255
 	SetBackgroundColor 0 0 0 240
 	SetBorderColor 136 136 255 255
 	MinimapIcon 2 Purple Cross
-	
+
 #-------------------------------------------------------------------------------
 # Subsection: Heist & Expedition
 #-------------------------------------------------------------------------------
@@ -126,82 +142,81 @@ Show
 	SetFontSize 45
 	DisableDropSound
 	MinimapIcon 0 Cyan Hexagon
-	
+
 #-------------------------------------------------------------------------------
 # Subsection: Basic
 #-------------------------------------------------------------------------------
 
 Show
-	Class = "Currency"
-	BaseType = "Mirror of Kalandra"
-	SetTextColor 86 0 0 255
-	SetBackgroundColor 250 150 25 240
-	SetBorderColor 255 255 255 255
+	Class == "Stackable Currency"
+	BaseType == "Albino Rhoa Feather" "Ancient Collarbone" "Ancient Jawbone" "Ancient Rib" "Divine Orb" "Hinekora's Lock" "Mirror of Kalandra" "Perfect Chaos Orb" "Perfect Exalted Orb" "Perfect Jeweller's Orb"
+	SetTextColor 255 0 0 255
+	SetBackgroundColor 255 255 255 255
+	SetBorderColor 255 0 0 255
 	SetFontSize 45
-	PlayAlertSound ShMirror 200
-	MinimapIcon 0 Cyan Circle
-	PlayEffect Cyan 
+	PlayAlertSound 6 300
+	MinimapIcon 0 Red Star
+	PlayEffect Red 
 
 Show
-	Class = "Currency"
-	BaseType = "Eternal Orb"
-	SetTextColor 86 0 0 255
-	SetBackgroundColor 250 150 25 240
-	SetBorderColor 255 255 255 255
-	SetFontSize 45
-	PlayAlertSound ShGeneral 200
-	MinimapIcon 0 Orange Circle
-	PlayEffect Orange 
-
-Show
-	Class = "Currency"
-	BaseType = "Divine Orb"
-	SetTextColor 86 0 0 255
-	SetBackgroundColor 250 150 25 240
-	SetBorderColor 255 255 255 255
-	SetFontSize 45
-	PlayAlertSound ShDivine 200
-	MinimapIcon 0 Blue Circle
-	PlayEffect Blue 
-
-Show
-	Class = "Currency"
-	BaseType = "Exalted Orb"
+	Class == "Stackable Currency"
+	BaseType == "Fracturing Orb" "Orb of Annulment" "Perfect Regal Orb" "Preserved Collarbone"
 	SetTextColor 0 0 0 255
-	SetBackgroundColor 250 150 25 240
+	SetBackgroundColor 245 105 90 255
 	SetBorderColor 0 0 0 255
 	SetFontSize 45
-	PlayAlertSound ShExalted 100
+	PlayAlertSound 1 300
+	MinimapIcon 0 Red Circle
+	PlayEffect Red 
+
+Show
+	Class == "Stackable Currency"
+	BaseType == "Chaos Orb" "Greater Chaos Orb" "Greater Exalted Orb" "Greater Regal Orb" "Orb of Chance" "Preserved Cranium" "Preserved Rib"
+	SetTextColor 245 105 90 255
+	SetBorderColor 245 105 90 255
+	SetFontSize 45
+	PlayAlertSound 2 300
+	MinimapIcon 1 Yellow Circle
+	PlayEffect Yellow 
+
+Show
+	Class == "Stackable Currency"
+	BaseType == "Exalted Orb" "Gemcutter's Prism" "Gnawed Collarbone" "Gnawed Jawbone" "Gnawed Rib" "Greater Jeweller's Orb" "Perfect Orb of Augmentation" "Perfect Orb of Transmutation" "Preserved Jawbone" "Preserved Vertebrae"
+	SetTextColor 245 139 87 255
+	SetBorderColor 245 139 87 255
+	SetFontSize 45
+	PlayAlertSound 2 300
+	MinimapIcon 1 Yellow Circle
+	PlayEffect White 
+
+Show
+	Class == "Stackable Currency"
+	BaseType == "Armourer's Scrap" "Artificer's Orb" "Chance Shard" "Glassblower's Bauble" "Greater Orb of Augmentation" "Greater Orb of Transmutation" "Orb of Alchemy" "Regal Orb" "Vaal Orb"
+	SetTextColor 240 180 100 255
+	SetBorderColor 240 180 100 255
+	SetFontSize 40
+	PlayAlertSound 2 300
 	MinimapIcon 2 White Circle
 	PlayEffect White 
 
 Show
-	Class = "Currency"
-	BaseType = "Chaos Orb"
-	SetTextColor 0 0 0 255
-	SetBackgroundColor 250 150 25 240
-	SetBorderColor 0 0 0 255
-	SetFontSize 45
-	PlayAlertSound 2 80
-	MinimapIcon 2 White Circle
+	Class == "Stackable Currency"
+	BaseType == "Arcanist's Etcher" "Blacksmith's Whetstone" "Lesser Jeweller's Orb"
+	SetTextColor 220 175 132 255
+	SetBorderColor 220 175 132 255
+	SetFontSize 40
+	MinimapIcon 2 Grey Circle
+	PlayEffect White Temp
 
 Show
-	Class = "Currency"
-	BaseType = "Blessed Orb" "Chromatic Orb" "Enkindling Orb" "Gemcutter's Prism" "Instilling Orb" "Jeweller's Orb" "Orb of Alchemy" "Orb of Annulment" "Orb of Binding" "Orb of Fusing" "Orb of Horizons" "Orb of Regret" "Orb of Scouring" "Orb of Unmaking" "Regal Orb" "Vaal Orb"
-	SetTextColor 0 0 0 255
-	SetBackgroundColor 250 150 25 240
-	SetBorderColor 0 0 0 255
-	SetFontSize 35
-	MinimapIcon 2 Pink Circle
-
-Show
-	Class = "Currency"
-	BaseType = "Armourer's Scrap" "Blacksmith's Whetstone" "Cartographer's Chisel" "Engineer's Orb" "Glassblower's Bauble" "Orb of Alteration" "Orb of Augmentation" "Orb of Chance" "Orb of Transmutation"
-	SetTextColor 170 160 130 255
-	SetBackgroundColor 0 0 0 240
-	SetBorderColor 170 160 130 255
-	SetFontSize 35
-	MinimapIcon 2 Brown Hexagon
+	Class == "Stackable Currency"
+	BaseType == "Black Scythe Artifact" "Broken Circle Artifact" "Exotic Coinage" "Order Artifact" "Sun Artifact"
+	SetTextColor 240 180 100 255
+	SetBorderColor 240 180 100 255
+	SetFontSize 40
+	PlayAlertSound 2 300
+	MinimapIcon 1 White Kite
+	PlayEffect Yellow Temp
 
 Show
 	Class = "Currency"
@@ -231,7 +246,7 @@ Show
 	SetBackgroundColor 255 215 0 240
 	SetBorderColor 180 96 0 255
 	SetFontSize 25
-	MinimapIcon 0 Yellow Moon
+	MinimapIcon 1 Yellow Moon
 	PlayEffect Yellow 
 
 Show
@@ -241,7 +256,7 @@ Show
 	SetBackgroundColor 255 215 0 240
 	SetBorderColor 180 96 0 255
 	SetFontSize 20
-	MinimapIcon 1 Yellow Moon
+	MinimapIcon 2 Yellow Moon
 	PlayEffect Yellow 
 
 Show
@@ -251,7 +266,6 @@ Show
 	SetBackgroundColor 255 215 0 240
 	SetBorderColor 180 96 0 255
 	SetFontSize 17
-	MinimapIcon 2 Yellow Moon
 	PlayEffect Yellow 
 
 Show
@@ -266,7 +280,7 @@ Show
 #-------------------------------------------------------------------------------
 
 Show
-	Class = "Quest"
+	Class = "Instance Local Items" "Quest Items" "Quest"
 	SetBorderColor 0 191 0 255
 	SetFontSize 45
 	PlayAlertSound 12 80
@@ -276,21 +290,6 @@ Show
 #===============================================================================
 # Section: Items
 #===============================================================================
-
-#-------------------------------------------------------------------------------
-# Subsection: Uniq
-#-------------------------------------------------------------------------------
-
-# ===============================================================================
-Show
-	Rarity = Unique
-	SetTextColor 255 200 0 255
-	SetBackgroundColor 0 0 0 240
-	SetBorderColor 210 0 0 255
-	SetFontSize 45
-	PlayAlertSound 1 80
-	MinimapIcon 0 Yellow Star
-	PlayEffect Yellow 
 
 #-------------------------------------------------------------------------------
 # Subsection: Jewels
@@ -338,7 +337,7 @@ Show
 #-------------------------------------------------------------------------------
 
 Show
-	Sockets >= 1
+	Sockets >= "1"
 	Height <= 4
 	Width <= 2
 	SetTextColor 0 0 0 255
@@ -355,6 +354,46 @@ Show
 	SetBackgroundColor 255 192 203 150
 	SetBorderColor 0 128 0 255
 	SetFontSize 25
+	DisableDropSound
+
+Show
+	Class == "Socketable"
+	BaseType == "Atmohua's Soul Core of Retreat" "Courtesan Mannan's Rune of Cruelty" "Saqawal's Rune of Memory" "Saqawal's Rune of the Sky" "Soul Core of Azcapa" "Soul Core of Jiquani" "Soul Core of Tacati" "Tecrod's Gaze" "The Greatwolf's Rune of Claws" "The Greatwolf's Rune of Willpower"
+	SetTextColor 0 0 0 255
+	SetBackgroundColor 245 105 90 255
+	SetBorderColor 0 0 0 255
+	SetFontSize 45
+	PlayAlertSound 1 300
+	MinimapIcon 0 Red Circle
+	PlayEffect Red 
+
+Show
+	Class == "Socketable"
+	BaseType == "Cholotl's Soul Core of War" "Estazunti's Soul Core of Convalescence" "Fenumus' Rune of Agony" "Fenumus' Rune of Spinning" "Greater Rune of Tithing" "Kurgal's Gaze" "Lady Hestra's Rune of Winter" "Opiloti's Soul Core of Assault" "Primate Talisman" "Soul Core of Citaqualotl" "Soul Core of Quipolatl" "Talisman of Egrin" "Thane Myrk's Rune of Summer" "Ulaman's Gaze" "Xopec's Soul Core of Power"
+	SetTextColor 245 105 90 255
+	SetBorderColor 245 105 90 255
+	SetFontSize 45
+	PlayAlertSound 2 300
+	MinimapIcon 1 Yellow Circle
+	PlayEffect Yellow 
+
+Show
+	Class == "Socketable"
+	SetTextColor 220 175 132 255
+	SetBorderColor 220 175 132 255
+	SetFontSize 40
+	MinimapIcon 2 Grey Circle
+	PlayEffect White Temp
+
+#-------------------------------------------------------------------------------
+# Subsection: Charms
+#-------------------------------------------------------------------------------
+
+Show
+	Class = "Charm"
+	SetTextColor 255 200 0 255
+	SetBackgroundColor 0 0 0 240
+	SetBorderColor 210 0 0 255
 	DisableDropSound
 
 #===============================================================================
@@ -378,17 +417,6 @@ Show
 	SetBackgroundColor 138 132 132 63
 	SetBorderColor 184 218 242 255
 	SetFontSize 22
-
-#-------------------------------------------------------------------------------
-# Subsection: Charms
-#-------------------------------------------------------------------------------
-
-Show
-	Class = "Charm"
-	SetTextColor 255 200 0 255
-	SetBackgroundColor 0 0 0 240
-	SetBorderColor 210 0 0 255
-	DisableDropSound
 
 #-------------------------------------------------------------------------------
 # Subsection: FLASKS
