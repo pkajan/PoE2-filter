@@ -3,7 +3,7 @@
 #===============================================================================
 #
 # NAME:          Greatest Filter of Them All
-# VERSION:       2.8
+# VERSION:       2.9
 # AUTHOR:        pKajan
 # CONTACT:       https://github.com/pkajan/PoE2-filter/
 # LINK:          https://raw.githubusercontent.com/pkajan/PoE2-filter/refs/heads/main/GFoTA.filter
@@ -73,22 +73,6 @@ Show
 	SetBackgroundColor 138 132 132 63
 	SetBorderColor 184 218 242 255
 	SetFontSize 22
-
-#-------------------------------------------------------------------------------
-# Subsection: Yellow & Blue & White
-#-------------------------------------------------------------------------------
-
-Show
-	Rarity = Rare
-	SetBackgroundColor 0 0 0 175
-	SetFontSize 18
-	DisableDropSound
-
-Hide
-	Rarity <= Magic
-	Class = "Boots" "Gloves" "Helmets" "Rings" "Amulets" "One Hand Axes" "Two Hand Axes" "One Hand Maces" "Two Hand Maces" "One Hand Swords" "Two Hand Swords" "Wands" "Claws" "Staves" "Belts" "Sceptres" "Shields" "Bows" "Daggers" "Quivers" "Body Armours" "Spear" "Crossbow" "Quarterstaff" "Buckler" "Focus"
-	SetFontSize 18
-	DisableDropSound
 
 #===============================================================================
 # Section: Currency
@@ -263,13 +247,6 @@ Show
 	SetBorderColor 100 50 30 255
 	SetFontSize 35
 
-Show
-	Class = "Currency"
-	SetTextColor 0 0 0 255
-	SetBackgroundColor 254 191 128 240
-	SetBorderColor 180 96 0 255
-	MinimapIcon 0 Brown Moon
-
 #-------------------------------------------------------------------------------
 # Subsection: QUEST
 #-------------------------------------------------------------------------------
@@ -356,14 +333,6 @@ Show
 	PlayAlertSound 2 300
 	MinimapIcon 1 Yellow Circle
 	PlayEffect Yellow 
-
-Show
-	Class == "Socketable"
-	SetTextColor 220 175 132 255
-	SetBorderColor 220 175 132 255
-	SetFontSize 40
-	MinimapIcon 2 Grey Circle
-	PlayEffect White Temp
 
 #-------------------------------------------------------------------------------
 # Subsection: FLASKS
@@ -526,9 +495,40 @@ Show
 	SetFontSize 17
 	PlayEffect Yellow 
 
+#-------------------------------------------------------------------------------
+# Subsection: Yellow & Blue & White
+#-------------------------------------------------------------------------------
+
+Show
+	Rarity = Rare
+	SetBackgroundColor 0 0 0 175
+	SetFontSize 18
+	DisableDropSound
+
+Hide
+	Rarity <= Magic
+	Class = "Boots" "Gloves" "Helmets" "Rings" "Amulets" "One Hand Axes" "Two Hand Axes" "One Hand Maces" "Two Hand Maces" "One Hand Swords" "Two Hand Swords" "Wands" "Claws" "Staves" "Belts" "Sceptres" "Shields" "Bows" "Daggers" "Quivers" "Body Armours" "Spear" "Crossbow" "Quarterstaff" "Buckler" "Focus"
+	SetFontSize 18
+	DisableDropSound
+
 #===============================================================================
-# Section: Show ALL UNKNOWN
+# Section: Show ALL UNKNOWN & generic
 #===============================================================================
+
+Show
+	Class == "Socketable"
+	SetTextColor 220 175 132 255
+	SetBorderColor 220 175 132 255
+	SetFontSize 35
+	MinimapIcon 2 Grey Circle
+	PlayEffect White Temp
+
+Show
+	Class = "Currency"
+	SetTextColor 0 0 0 255
+	SetBackgroundColor 254 191 128 240
+	SetBorderColor 180 96 0 255
+	MinimapIcon 0 Brown Moon
 
 Show
 	SetTextColor 150 0 0 255
