@@ -3,7 +3,7 @@
 #===============================================================================
 #
 # NAME:          Greatest Filter of Them All
-# VERSION:       2.9
+# VERSION:       2.91
 # AUTHOR:        pKajan
 # CONTACT:       https://github.com/pkajan/PoE2-filter/
 # LINK:          https://raw.githubusercontent.com/pkajan/PoE2-filter/refs/heads/main/GFoTA.filter
@@ -139,7 +139,7 @@ Show
 	MinimapIcon 2 Brown Circle
 
 Show
-	BaseType = "Coffer Relic" "Urn Relic"
+	Class = "Relics"
 	SetTextColor 180 96 0 255
 	SetBackgroundColor 254 191 128 240
 	SetBorderColor 98 128 0 255
