@@ -1,24 +1,33 @@
 @echo off
+:: --- SETTINGS ---
+set "AUTOUPDATE=1"   :: 1 = enabled, 0 = disabled
+:: -----------------
 
 :: --- SELF-UPDATE SECTION ---
-SET "myscript=%~f0"
-SET "updatefile=%TEMP%\update_PoE2_filter.cmd"
-SET "updateurl=https://raw.githubusercontent.com/pkajan/PoE2-filter/refs/heads/main/update_PoE2_filter.cmd"
+if "%AUTOUPDATE%"=="1" (
+    SET "myscript=%~f0"
+    SET "updatefile=%TEMP%\update_PoE2_filter.cmd"
+    SET "updateurl=https://raw.githubusercontent.com/pkajan/PoE2-filter/refs/heads/main/update_PoE2_filter.cmd"
 
-curl -s -L "%updateurl%" -o "%updatefile%"
+    curl -s -L "%updateurl%" -o "%updatefile%"
 
-fc "%myscript%" "%updatefile%" >nul
-if errorlevel 1 (
-    echo New version found! Updating...
-    copy /y "%updatefile%" "%myscript%" >nul
-    del "%updatefile%"
-    echo Restarting updated script...
-	cmd /c "%myscript%"
-	exit /b
+    fc "%myscript%" "%updatefile%" >nul
+    if errorlevel 1 (
+        echo New version found! Updating...
+        copy /y "%updatefile%" "%myscript%" >nul
+        del "%updatefile%"
+        echo Restarting updated script...
+        cmd /c "%myscript%"
+        exit /b
+    ) else (
+        del "%updatefile%"
+        echo Script up to date.
+    )
 ) else (
-    del "%updatefile%"
+    echo Auto-update disabled.
 )
 :: --- END OF SELF-UPDATE SECTION ---
+
 
 setlocal enabledelayedexpansion
 
@@ -122,6 +131,50 @@ echo Downloading %choice%:
 
 curl -L "%selectedURL%" -o "%tempFile%"
 
+:: --- VERSION INFO SECTION ---
+:: Get version info from downloaded filter
+set "newVersion="
+for /f "tokens=2 delims=:" %%a in ('findstr /b /c:"# VERSION:" "%tempFile%"') do (
+    set "newVersion=%%~a"
+)
+set "newVersion=%newVersion: =%"
+
+:: Check existing file version (if exists)
+set "oldVersion="
+
+:: Prefer OneDrive path if exists, else fallback to local Documents
+if exist "%poe2_path_onedrive%" (
+    for /f "tokens=2 delims=:" %%a in ('findstr /b /c:"# VERSION:" "%poe2_path_onedrive%"') do (
+        set "oldVersion=%%~a"
+    )
+) else if exist "%poe2_path_plebs%" (
+    for /f "tokens=2 delims=:" %%a in ('findstr /b /c:"# VERSION:" "%poe2_path_plebs%"') do (
+        set "oldVersion=%%~a"
+    )
+)
+
+:: Cleanup spaces or hidden chars
+set "oldVersion=%oldVersion: =%"
+for /f "delims=" %%x in ("%oldVersion%") do set "oldVersion=%%~x"
+
+echo.
+:: Enable ANSI escape sequences
+for /f "delims=" %%a in ('echo prompt $E^| cmd') do set "ESC=%%a"
+
+echo.
+if defined oldVersion (
+    if "%oldVersion%"=="%newVersion%" (
+        echo %ESC%[32mUp to date. Version %newVersion%%ESC%[0m
+    ) else (
+        echo %ESC%[32mUpdating: %oldVersion% ^> %newVersion%%ESC%[0m
+    )
+) else (
+    echo %ESC%[32mInstalling new version %newVersion%%ESC%[0m
+)
+
+:: --- END OF VERSION INFO SECTION ---
+
+
 echo.
 echo Copying to OneDrive path...
 copy "%tempFile%" "%poe2_path_onedrive%" /y > nul
@@ -133,6 +186,6 @@ copy "%tempFile%" "%poe2_path_plebs%" /y > nul
 del /q "%tempFile%"
 
 echo.
-echo Done! Installed filter: %filterLabel%
+echo %ESC%[32mDone%ESC%[0m Installed filter: %ESC%[33m%filterLabel%%ESC%[0m
 pause
 
