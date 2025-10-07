@@ -1,15 +1,23 @@
 @echo off
+
 :: --- SETTINGS ---
-set "AUTOUPDATE=1"   :: 1 = enabled, 0 = disabled
+SET "AUTOUPDATE=1"
+SET "myscript=%~f0"
+SET "updatefile=%TEMP%\update_PoE2_filter.cmd"
+SET "updateurl=https://raw.githubusercontent.com/pkajan/PoE2-filter/refs/heads/main/update_PoE2_filter.cmd"
 :: -----------------
+
+:: Disable delayed expansion temporarily
+setlocal DisableDelayedExpansion
 
 :: --- SELF-UPDATE SECTION ---
 if "%AUTOUPDATE%"=="1" (
-    SET "myscript=%~f0"
-    SET "updatefile=%TEMP%\update_PoE2_filter.cmd"
-    SET "updateurl=https://raw.githubusercontent.com/pkajan/PoE2-filter/refs/heads/main/update_PoE2_filter.cmd"
-
     curl -s -L "%updateurl%" -o "%updatefile%"
+
+    if not exist "%updatefile%" (
+        echo Failed to download update file.
+        goto :skipUpdate
+    )
 
     fc "%myscript%" "%updatefile%" >nul
     if errorlevel 1 (
@@ -26,6 +34,14 @@ if "%AUTOUPDATE%"=="1" (
 ) else (
     echo Auto-update disabled.
 )
+
+:skipUpdate
+endlocal
+:: --- END OF SELF-UPDATE SECTION ---
+
+:: Now enable delayed expansion for rest of the script
+setlocal enabledelayedexpansion
+
 :: --- END OF SELF-UPDATE SECTION ---
 
 
@@ -129,7 +145,7 @@ echo.
 echo Downloading %choice%:
 ::@echo   !selectedURL!
 
-curl -L "%selectedURL%" -o "%tempFile%"
+curl -s -L "%selectedURL%" -o "%tempFile%"
 
 :: --- VERSION INFO SECTION ---
 :: Get version info from downloaded filter
