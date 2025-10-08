@@ -199,7 +199,7 @@ echo.
 echo Copying to local Documents path...
 copy "%tempFile%" "%poe2_path_plebs%" /y > nul
 
-del /q "%tempFile%"
+::del /q "%tempFile%"
 
 echo.
 echo %ESC%[32mDone%ESC%[0m Installed filter: %ESC%[33m%filterLabel%%ESC%[0m
