@@ -23,12 +23,10 @@ if "%AUTOUPDATE%"=="1" (
     if errorlevel 1 (
         echo New version found! Updating...
         copy /y "%updatefile%" "%myscript%" >nul
-        ::del "%updatefile%"
         echo Restarting updated script...
         cmd /c "%myscript%"
         exit /b
     ) else (
-        ::del "%updatefile%"
         echo Script up to date.
     )
 ) else (
@@ -198,8 +196,6 @@ copy "%tempFile%" "%poe2_path_onedrive%" /y > nul
 echo.
 echo Copying to local Documents path...
 copy "%tempFile%" "%poe2_path_plebs%" /y > nul
-
-::del /q "%tempFile%"
 
 echo.
 echo %ESC%[32mDone%ESC%[0m Installed filter: %ESC%[33m%filterLabel%%ESC%[0m
