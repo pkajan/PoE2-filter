@@ -23,12 +23,12 @@ if "%AUTOUPDATE%"=="1" (
     if errorlevel 1 (
         echo New version found! Updating...
         copy /y "%updatefile%" "%myscript%" >nul
-        del "%updatefile%"
+        ::del "%updatefile%"
         echo Restarting updated script...
         cmd /c "%myscript%"
         exit /b
     ) else (
-        del "%updatefile%"
+        ::del "%updatefile%"
         echo Script up to date.
     )
 ) else (
