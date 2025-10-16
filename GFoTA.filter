@@ -3,7 +3,7 @@
 #===============================================================================
 #
 # NAME:          Greatest Filter of Them All
-# VERSION:       2.91
+# VERSION:       2.93
 # AUTHOR:        pKajan
 # CONTACT:       https://github.com/pkajan/PoE2-filter/
 # LINK:          https://raw.githubusercontent.com/pkajan/PoE2-filter/refs/heads/main/GFoTA.filter
@@ -110,6 +110,7 @@ Show
 	SetTextColor 215 0 107 255
 	SetBorderColor 0 255 64 255
 	SetFontSize 40
+	PlayAlertSound 6 50
 	MinimapIcon 2 White Hexagon
 	PlayEffect Purple Temp
 
@@ -284,7 +285,7 @@ Show
 
 Show
 	Class = "Charm"
-	SetTextColor 191 244 0 200
+	SetTextColor 255 128 64 200
 	SetBackgroundColor 0 0 0 200
 	SetBorderColor 191 244 0 120
 	DisableDropSound
@@ -502,12 +503,24 @@ Show
 Show
 	Rarity = Rare
 	SetBackgroundColor 0 0 0 175
+	SetFontSize 20
+	DisableDropSound
+
+Hide
+	Rarity <= Magic
+	Class = "One Hand Axes" "Two Hand Axes" "One Hand Maces" "Two Hand Maces" "One Hand Swords" "Two Hand Swords" "Wands" "Claws" "Staves" "Sceptres" "Shields" "Bows" "Daggers" "Quivers" "Spear" "Crossbow" "Quarterstaff" "Buckler" "Focus"
 	SetFontSize 18
 	DisableDropSound
 
 Hide
 	Rarity <= Magic
-	Class = "Boots" "Gloves" "Helmets" "Rings" "Amulets" "One Hand Axes" "Two Hand Axes" "One Hand Maces" "Two Hand Maces" "One Hand Swords" "Two Hand Swords" "Wands" "Claws" "Staves" "Belts" "Sceptres" "Shields" "Bows" "Daggers" "Quivers" "Body Armours" "Spear" "Crossbow" "Quarterstaff" "Buckler" "Focus"
+	Class = "Boots" "Gloves" "Helmets" "Body Armours"
+	SetFontSize 18
+	DisableDropSound
+
+Hide
+	Rarity <= Magic
+	Class = "Rings" "Amulets" "Belts"
 	SetFontSize 18
 	DisableDropSound
 
