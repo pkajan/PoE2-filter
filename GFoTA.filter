@@ -3,7 +3,7 @@
 #===============================================================================
 #
 # NAME:          Greatest Filter of Them All
-# VERSION:       2.93
+# VERSION:       2.95
 # AUTHOR:        pKajan
 # CONTACT:       https://github.com/pkajan/PoE2-filter/
 # LINK:          https://raw.githubusercontent.com/pkajan/PoE2-filter/refs/heads/main/GFoTA.filter
@@ -21,13 +21,13 @@
 # ===============================================================================
 Show
 	Rarity = Unique
-	SetTextColor 255 200 0 255
-	SetBackgroundColor 0 0 0 240
-	SetBorderColor 210 0 0 255
+	SetTextColor 64 0 0 255
+	SetBackgroundColor 255 128 0 175
+	SetBorderColor 64 0 0 255
 	SetFontSize 45
 	PlayAlertSound 1 80
-	MinimapIcon 0 Yellow Star
-	PlayEffect Yellow 
+	MinimapIcon 0 Brown Star
+	PlayEffect Orange 
 
 #===============================================================================
 # Section: Maps
@@ -120,7 +120,7 @@ Show
 
 Show
 	Class = "Stackable Currency"
-	BaseType = "Black Scythe Artifact" "Broken Circle Artifact" "Exotic Coinage" "Order Artifact" "Sun Artifact"
+	BaseType = "Runic Splinter" "Runic Splinter" "Exotic Coinage" "Runic Splinter" "Expedition Logbook" "Black Scythe Artifact" "Broken Circle Artifact" "Order Artifact" "Sun Artifact"
 	SetTextColor 0 0 0 255
 	SetBackgroundColor 200 200 200 240
 	SetBorderColor 255 255 255 255
