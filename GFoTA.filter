@@ -3,7 +3,7 @@
 #===============================================================================
 #
 # NAME:          Greatest Filter of Them All
-# VERSION:       2.98
+# VERSION:       2.99
 # AUTHOR:        pKajan
 # CONTACT:       https://github.com/pkajan/PoE2-filter/
 # LINK:          https://raw.githubusercontent.com/pkajan/PoE2-filter/refs/heads/main/GFoTA.filter
@@ -60,7 +60,7 @@ Show
 	AreaLevel < 10
 	ItemLevel < 8
 	Rarity = Magic
-	Class = "Boots" "Gloves" "Helmets" "Rings" "Amulets" "One Hand Axes" "Two Hand Axes" "One Hand Maces" "Two Hand Maces" "One Hand Swords" "Two Hand Swords" "Wands" "Claws" "Staves" "Belts" "Sceptres" "Shields" "Bows" "Daggers" "Quivers" "Body Armours" "Spear" "Crossbow" "Quarterstaff" "Buckler" "Focus"
+	Class = "Boots" "Gloves" "Helmets" "Rings" "Amulets" "One Hand Axes" "Two Hand Axes" "One Hand Maces" "Two Hand Maces" "One Hand Swords" "Two Hand Swords" "Wands" "Claws" "Staves" "Belts" "Sceptres" "Shields" "Bows" "Daggers" "Quivers" "Body Armours" "Spear" "Crossbow" "Quarterstaff" "Buckler" "Focus" "Talismans"
 	SetBackgroundColor 138 132 132 63
 	SetBorderColor 184 218 242 255
 	SetFontSize 22
@@ -69,7 +69,7 @@ Show
 	AreaLevel < 10
 	ItemLevel < 6
 	Rarity = Normal
-	Class = "Boots" "Gloves" "Helmets" "Rings" "Amulets" "One Hand Axes" "Two Hand Axes" "One Hand Maces" "Two Hand Maces" "One Hand Swords" "Two Hand Swords" "Wands" "Claws" "Staves" "Belts" "Sceptres" "Shields" "Bows" "Daggers" "Quivers" "Body Armours" "Spear" "Crossbow" "Quarterstaff" "Buckler" "Focus"
+	Class = "Boots" "Gloves" "Helmets" "Rings" "Amulets" "One Hand Axes" "Two Hand Axes" "One Hand Maces" "Two Hand Maces" "One Hand Swords" "Two Hand Swords" "Wands" "Claws" "Staves" "Belts" "Sceptres" "Shields" "Bows" "Daggers" "Quivers" "Body Armours" "Spear" "Crossbow" "Quarterstaff" "Buckler" "Focus" "Talismans"
 	SetBackgroundColor 138 132 132 63
 	SetBorderColor 184 218 242 255
 	SetFontSize 22
@@ -99,7 +99,7 @@ Show
 
 Show
 	Class == "Augment"
-	BaseType = "Rune" "Soul Core" "Talisman"
+	BaseType = "Rune" "Soul Core"
 	SetTextColor 175 96 37 255
 	SetBackgroundColor 0 0 0 240
 	SetBorderColor 136 136 255 255
@@ -508,7 +508,7 @@ Show
 
 Hide
 	Rarity <= Magic
-	Class = "One Hand Axes" "Two Hand Axes" "One Hand Maces" "Two Hand Maces" "One Hand Swords" "Two Hand Swords" "Wands" "Claws" "Staves" "Sceptres" "Shields" "Bows" "Daggers" "Quivers" "Spear" "Crossbow" "Quarterstaff" "Buckler" "Focus"
+	Class = "One Hand Axes" "Two Hand Axes" "One Hand Maces" "Two Hand Maces" "One Hand Swords" "Two Hand Swords" "Wands" "Claws" "Staves" "Sceptres" "Shields" "Bows" "Daggers" "Quivers" "Spear" "Crossbow" "Quarterstaff" "Buckler" "Focus" "Talismans"
 	SetFontSize 18
 	DisableDropSound
 
