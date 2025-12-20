@@ -3,7 +3,7 @@
 #===============================================================================
 #
 # NAME:          Greatest Filter of Them All
-# VERSION:       2.95
+# VERSION:       2.98
 # AUTHOR:        pKajan
 # CONTACT:       https://github.com/pkajan/PoE2-filter/
 # LINK:          https://raw.githubusercontent.com/pkajan/PoE2-filter/refs/heads/main/GFoTA.filter
@@ -98,7 +98,7 @@ Show
 	MinimapIcon 2 Purple Cross
 
 Show
-	Class == "Socketable"
+	Class == "Augment"
 	BaseType = "Rune" "Soul Core" "Talisman"
 	SetTextColor 175 96 37 255
 	SetBackgroundColor 0 0 0 240
@@ -315,7 +315,7 @@ Show
 	DisableDropSound
 
 Show
-	Class == "Socketable"
+	Class == "Augment"
 	BaseType == "Atmohua's Soul Core of Retreat" "Courtesan Mannan's Rune of Cruelty" "Saqawal's Rune of Memory" "Saqawal's Rune of the Sky" "Soul Core of Azcapa" "Soul Core of Jiquani" "Soul Core of Tacati" "Tecrod's Gaze" "The Greatwolf's Rune of Claws" "The Greatwolf's Rune of Willpower"
 	SetTextColor 0 0 0 255
 	SetBackgroundColor 245 105 90 255
@@ -326,8 +326,8 @@ Show
 	PlayEffect Red 
 
 Show
-	Class == "Socketable"
-	BaseType == "Cholotl's Soul Core of War" "Estazunti's Soul Core of Convalescence" "Fenumus' Rune of Agony" "Fenumus' Rune of Spinning" "Greater Rune of Tithing" "Kurgal's Gaze" "Lady Hestra's Rune of Winter" "Opiloti's Soul Core of Assault" "Primate Talisman" "Soul Core of Citaqualotl" "Soul Core of Quipolatl" "Talisman of Egrin" "Thane Myrk's Rune of Summer" "Ulaman's Gaze" "Xopec's Soul Core of Power"
+	Class == "Augment"
+	BaseType == "Cholotl's Soul Core of War" "Estazunti's Soul Core of Convalescence" "Fenumus' Rune of Agony" "Fenumus' Rune of Spinning" "Greater Rune of Tithing" "Kurgal's Gaze" "Lady Hestra's Rune of Winter" "Opiloti's Soul Core of Assault" "Soul Core of Citaqualotl" "Soul Core of Quipolatl" "Thane Myrk's Rune of Summer" "Ulaman's Gaze" "Xopec's Soul Core of Power"
 	SetTextColor 245 105 90 255
 	SetBorderColor 245 105 90 255
 	SetFontSize 45
@@ -529,7 +529,7 @@ Hide
 #===============================================================================
 
 Show
-	Class == "Socketable"
+	Class == "Augment"
 	SetTextColor 220 175 132 255
 	SetBorderColor 220 175 132 255
 	SetFontSize 35
