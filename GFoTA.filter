@@ -3,7 +3,7 @@
 #===============================================================================
 #
 # NAME:          Greatest Filter of Them All
-# VERSION:       2.99
+# VERSION:       3.01
 # AUTHOR:        pKajan
 # CONTACT:       https://github.com/pkajan/PoE2-filter/
 # LINK:          https://raw.githubusercontent.com/pkajan/PoE2-filter/refs/heads/main/GFoTA.filter
@@ -241,6 +241,22 @@ Show
 	MinimapIcon 1 White Kite
 	PlayEffect Yellow Temp
 
+Show
+	Class = "Currency"
+	BaseType = "Scroll of Wisdom"
+	SetBackgroundColor 0 0 0 240
+	SetBorderColor 100 50 30 255
+	AreaLevel >= 25
+	SetFontSize 20
+	
+Show
+	Class = "Currency"
+	BaseType = "Scroll of Wisdom"
+	SetBackgroundColor 0 0 0 240
+	SetBorderColor 100 50 30 255
+	AreaLevel >= 15
+	SetFontSize 25
+	
 Show
 	Class = "Currency"
 	BaseType = "Scroll of Wisdom"
@@ -504,6 +520,7 @@ Show
 	Rarity = Rare
 	SetBackgroundColor 0 0 0 175
 	SetFontSize 20
+	SetBorderColor 180 96 0 255
 	DisableDropSound
 
 Hide
