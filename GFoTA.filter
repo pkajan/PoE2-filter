@@ -2,11 +2,11 @@
 # GREATEST FILTER OF THEM ALL
 #===============================================================================
 #
-# NAME:          Greatest Filter of Them All
-# VERSION:       3.01
-# AUTHOR:        pKajan
-# CONTACT:       https://github.com/pkajan/PoE2-filter/
-# LINK:          https://raw.githubusercontent.com/pkajan/PoE2-filter/refs/heads/main/GFoTA.filter
+# NAME:			Greatest Filter of Them All
+# VERSION:		3.02
+# AUTHOR:		pKajan
+# CONTACT:		https://github.com/pkajan/PoE2-filter/
+# LINK:			https://raw.githubusercontent.com/pkajan/PoE2-filter/refs/heads/main/GFoTA.filter
 #
 #
 #===============================================================================
@@ -373,70 +373,10 @@ Show
 	SetFontSize 18
 
 Show
-	AreaLevel <= 60
+	AreaLevel <= 1
 	Quality = 0
 	Class = "Mana Flask" "Life Flask"
-	BaseType = "Ultimate"
-	SetTextColor 200 200 200 175
-	SetBackgroundColor 0 100 150 175
-	SetBorderColor 127 127 127 175
-	SetFontSize 18
-
-Show
-	AreaLevel <= 55
-	Quality = 0
-	Class = "Mana Flask" "Life Flask"
-	BaseType = "Transcendent"
-	SetTextColor 200 200 200 175
-	SetBackgroundColor 0 100 150 175
-	SetBorderColor 127 127 127 175
-	SetFontSize 18
-
-Show
-	AreaLevel <= 45
-	Quality = 0
-	Class = "Mana Flask" "Life Flask"
-	BaseType = "Gargantuan"
-	SetTextColor 200 200 200 175
-	SetBackgroundColor 0 100 150 175
-	SetBorderColor 127 127 127 175
-	SetFontSize 18
-
-Show
-	AreaLevel <= 35
-	Quality = 0
-	Class = "Mana Flask" "Life Flask"
-	BaseType = "Colossal"
-	SetTextColor 200 200 200 175
-	SetBackgroundColor 0 100 150 175
-	SetBorderColor 127 127 127 175
-	SetFontSize 18
-
-Show
-	AreaLevel <= 25
-	Quality = 0
-	Class = "Mana Flask" "Life Flask"
-	BaseType = "Giant"
-	SetTextColor 200 200 200 175
-	SetBackgroundColor 0 100 150 175
-	SetBorderColor 127 127 127 175
-	SetFontSize 18
-
-Show
-	AreaLevel <= 20
-	Quality = 0
-	Class = "Mana Flask" "Life Flask"
-	BaseType = "Grand"
-	SetTextColor 200 200 200 175
-	SetBackgroundColor 0 100 150 175
-	SetBorderColor 127 127 127 175
-	SetFontSize 18
-
-Show
-	AreaLevel <= 15
-	Quality = 0
-	Class = "Mana Flask" "Life Flask"
-	BaseType = "Greater"
+	BaseType = "Lesser"
 	SetTextColor 200 200 200 175
 	SetBackgroundColor 0 100 150 175
 	SetBorderColor 127 127 127 175
@@ -453,10 +393,69 @@ Show
 	SetFontSize 18
 
 Show
-	AreaLevel <= 1
+	AreaLevel <= 15
 	Quality = 0
 	Class = "Mana Flask" "Life Flask"
-	BaseType = "Lesser"
+	BaseType = "Greater"
+	SetTextColor 200 200 200 175
+	SetBackgroundColor 0 100 150 175
+	SetBorderColor 127 127 127 175
+	SetFontSize 18
+
+Show
+	AreaLevel <= 20
+	Quality = 0
+	Class = "Mana Flask" "Life Flask"
+	BaseType = "Grand"
+	SetTextColor 200 200 200 175
+	SetBackgroundColor 0 100 150 175
+	SetBorderColor 127 127 127 175
+	SetFontSize 18
+
+Show
+	AreaLevel <= 25
+	Quality = 0
+	Class = "Mana Flask" "Life Flask"
+	BaseType = "Giant"
+	SetTextColor 200 200 200 175
+	SetBackgroundColor 0 100 150 175
+	SetBorderColor 127 127 127 175
+	SetFontSize 18
+Show
+	AreaLevel <= 35
+	Quality = 0
+	Class = "Mana Flask" "Life Flask"
+	BaseType = "Colossal"
+	SetTextColor 200 200 200 175
+	SetBackgroundColor 0 100 150 175
+	SetBorderColor 127 127 127 175
+	SetFontSize 18
+
+Show
+	AreaLevel <= 45
+	Quality = 0
+	Class = "Mana Flask" "Life Flask"
+	BaseType = "Gargantuan"
+	SetTextColor 200 200 200 175
+	SetBackgroundColor 0 100 150 175
+	SetBorderColor 127 127 127 175
+	SetFontSize 18
+
+Show
+	AreaLevel <= 55
+	Quality = 0
+	Class = "Mana Flask" "Life Flask"
+	BaseType = "Transcendent"
+	SetTextColor 200 200 200 175
+	SetBackgroundColor 0 100 150 175
+	SetBorderColor 127 127 127 175
+	SetFontSize 18
+
+Show
+	AreaLevel <= 60
+	Quality = 0
+	Class = "Mana Flask" "Life Flask"
+	BaseType = "Ultimate"
 	SetTextColor 200 200 200 175
 	SetBackgroundColor 0 100 150 175
 	SetBorderColor 127 127 127 175
@@ -511,6 +510,42 @@ Show
 	SetBorderColor 180 96 0 255
 	SetFontSize 17
 	PlayEffect Yellow 
+
+#-------------------------------------------------------------------------------
+# Subsection: Endgame Expert Bases (Crafting & High iLvl)
+#-------------------------------------------------------------------------------
+
+# 1. High-tier Normal and Magic bases for crafting (High Item Level)
+Show
+	ItemLevel >= 82
+	Rarity <= Magic
+	BaseType "Expert "
+	Class = "Boots" "Gloves" "Helmets" "Body Armours" "One Hand Axes" "Two Hand Axes" "One Hand Maces" "Two Hand Maces" "One Hand Swords" "Two Hand Swords" "Wands" "Claws" "Staves" "Sceptres" "Shields" "Bows" "Daggers" "Quivers" "Spear" "Crossbow" "Quarterstaff" "Buckler" "Focus"
+	SetTextColor 255 255 255 255
+	SetBorderColor 0 191 255 255
+	SetFontSize 28
+
+# 2. Top-tier Rare items (Expert bases only, hides low-tier junk)
+Show
+	Rarity = Rare
+	BaseType "Expert "
+	SetBackgroundColor 0 0 0 200
+	SetBorderColor 180 96 0 255
+	SetFontSize 26
+
+# 3. High-level Rare jewelry (Rings, Amulets, Belts don't have "Expert" prefix)
+Show
+	Rarity = Rare
+	Class "Rings" "Amulets" "Belts"
+	ItemLevel >= 75
+	SetBackgroundColor 0 0 0 200
+	SetBorderColor 255 165 0 255
+	SetFontSize 26
+
+# 4. Hide low-tier Rare items that are not Expert bases
+Hide
+	Rarity = Rare
+	Class = "Boots" "Gloves" "Helmets" "Body Armours" "One Hand Axes" "Two Hand Axes" "One Hand Maces" "Two Hand Maces" "One Hand Swords" "Two Hand Swords" "Wands" "Claws" "Staves" "Sceptres" "Shields" "Bows" "Daggers" "Quivers" "Spear" "Crossbow" "Quarterstaff" "Buckler" "Focus"
 
 #-------------------------------------------------------------------------------
 # Subsection: Yellow & Blue & White
