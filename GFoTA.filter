@@ -3,7 +3,7 @@
 #===============================================================================
 #
 # NAME:			Greatest Filter of Them All
-# VERSION:		3.02
+# VERSION:		3.04
 # AUTHOR:		pKajan
 # CONTACT:		https://github.com/pkajan/PoE2-filter/
 # LINK:			https://raw.githubusercontent.com/pkajan/PoE2-filter/refs/heads/main/GFoTA.filter
@@ -519,7 +519,6 @@ Show
 Show
 	ItemLevel >= 82
 	Rarity <= Magic
-	BaseType "Expert "
 	Class = "Boots" "Gloves" "Helmets" "Body Armours" "One Hand Axes" "Two Hand Axes" "One Hand Maces" "Two Hand Maces" "One Hand Swords" "Two Hand Swords" "Wands" "Claws" "Staves" "Sceptres" "Shields" "Bows" "Daggers" "Quivers" "Spear" "Crossbow" "Quarterstaff" "Buckler" "Focus"
 	SetTextColor 255 255 255 255
 	SetBorderColor 0 191 255 255
@@ -528,7 +527,6 @@ Show
 # 2. Top-tier Rare items (Expert bases only, hides low-tier junk)
 Show
 	Rarity = Rare
-	BaseType "Expert "
 	SetBackgroundColor 0 0 0 200
 	SetBorderColor 180 96 0 255
 	SetFontSize 26
@@ -545,7 +543,7 @@ Show
 # 4. Hide low-tier Rare items that are not Expert bases
 Hide
 	Rarity = Rare
-	Class = "Boots" "Gloves" "Helmets" "Body Armours" "One Hand Axes" "Two Hand Axes" "One Hand Maces" "Two Hand Maces" "One Hand Swords" "Two Hand Swords" "Wands" "Claws" "Staves" "Sceptres" "Shields" "Bows" "Daggers" "Quivers" "Spear" "Crossbow" "Quarterstaff" "Buckler" "Focus"
+	Class = "Bows" "Bucklers" "Crossbows" "Foci" "Quarterstaves" "One Hand Axes" "Two Hand Axes" "One Hand Maces" "Two Hand Maces" "One Hand Swords" "Two Hand Swords" "Wands" "Claws" "Staves" "Sceptres" "Shields"  "Daggers" "Quivers" "Spears" "Crossbow" "Quarterstaff" "Buckler" "Focus" "Talismans" "Body Armours" "Boots" "Gloves" "Helmets"
 
 #-------------------------------------------------------------------------------
 # Subsection: Yellow & Blue & White
@@ -560,13 +558,13 @@ Show
 
 Hide
 	Rarity <= Magic
-	Class = "One Hand Axes" "Two Hand Axes" "One Hand Maces" "Two Hand Maces" "One Hand Swords" "Two Hand Swords" "Wands" "Claws" "Staves" "Sceptres" "Shields" "Bows" "Daggers" "Quivers" "Spear" "Crossbow" "Quarterstaff" "Buckler" "Focus" "Talismans"
+	Class = "Bows" "Bucklers" "Crossbows" "Foci" "Quarterstaves" "One Hand Axes" "Two Hand Axes" "One Hand Maces" "Two Hand Maces" "One Hand Swords" "Two Hand Swords" "Wands" "Claws" "Staves" "Sceptres" "Shields"  "Daggers" "Quivers" "Spears" "Crossbow" "Quarterstaff" "Buckler" "Focus" "Talismans"
 	SetFontSize 18
 	DisableDropSound
 
 Hide
 	Rarity <= Magic
-	Class = "Boots" "Gloves" "Helmets" "Body Armours"
+	Class = "Body Armours" "Boots" "Gloves" "Helmets" 
 	SetFontSize 18
 	DisableDropSound
 
@@ -603,4 +601,4 @@ Show
 	PlayAlertSound 16 80
 	MinimapIcon 0 Red Circle
 	PlayEffect Red 
-
+	
