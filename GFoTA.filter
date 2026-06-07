@@ -517,7 +517,7 @@ Show
 # 0. tier Item
 Show
 	UnidentifiedItemTier >= 2
-	Rarity <= Magic
+	Rarity >= Magic
 	Class = "Boots" "Gloves" "Helmets" "Body Armours" "One Hand Axes" "Two Hand Axes" "One Hand Maces" "Two Hand Maces" "One Hand Swords" "Two Hand Swords" "Wands" "Claws" "Staves" "Sceptres" "Shields" "Bows" "Daggers" "Quivers" "Spear" "Crossbow" "Quarterstaff" "Buckler" "Focus"
 	SetTextColor 255 255 255 255
 	SetBorderColor 0 191 255 255
@@ -526,7 +526,7 @@ Show
 # 1. High-tier Normal and Magic bases for crafting (High Item Level)
 Show
 	ItemLevel >= 82
-	Rarity <= Magic
+	Rarity >= Magic
 	Class = "Boots" "Gloves" "Helmets" "Body Armours" "One Hand Axes" "Two Hand Axes" "One Hand Maces" "Two Hand Maces" "One Hand Swords" "Two Hand Swords" "Wands" "Claws" "Staves" "Sceptres" "Shields" "Bows" "Daggers" "Quivers" "Spear" "Crossbow" "Quarterstaff" "Buckler" "Focus"
 	SetTextColor 255 255 255 255
 	SetBorderColor 0 191 255 255
