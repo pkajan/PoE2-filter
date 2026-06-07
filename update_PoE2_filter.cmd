@@ -91,37 +91,37 @@ SET /p userchoice=Enter number [T, 0-6, Enter = default]:
 if not "%userchoice%"=="" (
     if "%userchoice%"=="0" (
         SET "choice=CHOICE0"
-        SET "filterFileName=NeverSinks_Dark"
+        SET "filterFileName=NeverSinks_Dark_SOFT"
         SET "filterLabel=SOFT"
     )
     if "%userchoice%"=="1" (
         SET "choice=CHOICE1"
-        SET "filterFileName=NeverSinks_Dark"
+        SET "filterFileName=NeverSinks_Dark_REGU"
         SET "filterLabel=REGULAR"
     )
     if "%userchoice%"=="2" (
         SET "choice=CHOICE2"
-        SET "filterFileName=NeverSinks_Dark"
+        SET "filterFileName=NeverSinks_Dark_SEMI"
         SET "filterLabel=SEMI-STRICT"
     )
     if "%userchoice%"=="3" (
         SET "choice=CHOICE3"
-        SET "filterFileName=NeverSinks_Dark"
+        SET "filterFileName=NeverSinks_STRI"
         SET "filterLabel=STRICT"
     )
     if "%userchoice%"=="4" (
         SET "choice=CHOICE4"
-        SET "filterFileName=NeverSinks_Dark"
+        SET "filterFileName=NeverSinks_Dark_VERY"
         SET "filterLabel=VERY-STRICT"
     )
     if "%userchoice%"=="5" (
         SET "choice=CHOICE5"
-        SET "filterFileName=NeverSinks_Dark"
+        SET "filterFileName=NeverSinks_Dark_UBER"
         SET "filterLabel=UBER-STRICT"
     )
     if "%userchoice%"=="6" (
         SET "choice=CHOICE6"
-        SET "filterFileName=NeverSinks_Dark"
+        SET "filterFileName=NeverSinks_Dark_UBERPLUS"
         SET "filterLabel=UBER-PLUS-STRICT"
     )
     if /I "%userchoice%"=="T" (
