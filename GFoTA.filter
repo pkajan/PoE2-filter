@@ -3,7 +3,7 @@
 #===============================================================================
 #
 # NAME:			Greatest Filter of Them All
-# VERSION:		3.04
+# VERSION:		3.05
 # AUTHOR:		pKajan
 # CONTACT:		https://github.com/pkajan/PoE2-filter/
 # LINK:			https://raw.githubusercontent.com/pkajan/PoE2-filter/refs/heads/main/GFoTA.filter
@@ -514,6 +514,14 @@ Show
 #-------------------------------------------------------------------------------
 # Subsection: Endgame Expert Bases (Crafting & High iLvl)
 #-------------------------------------------------------------------------------
+# 0. tier Item
+Show
+	UnidentifiedItemTier >= 2
+	Rarity <= Magic
+	Class = "Boots" "Gloves" "Helmets" "Body Armours" "One Hand Axes" "Two Hand Axes" "One Hand Maces" "Two Hand Maces" "One Hand Swords" "Two Hand Swords" "Wands" "Claws" "Staves" "Sceptres" "Shields" "Bows" "Daggers" "Quivers" "Spear" "Crossbow" "Quarterstaff" "Buckler" "Focus"
+	SetTextColor 255 255 255 255
+	SetBorderColor 0 191 255 255
+	SetFontSize 28
 
 # 1. High-tier Normal and Magic bases for crafting (High Item Level)
 Show
