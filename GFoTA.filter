@@ -1,18 +1,16 @@
+
 #===============================================================================
 # GREATEST FILTER OF THEM ALL
 #===============================================================================
 #
 # NAME:			Greatest Filter of Them All
-# VERSION:		3.05
+# VERSION:		3.06
 # AUTHOR:		pKajan
 # CONTACT:		https://github.com/pkajan/PoE2-filter/
 # LINK:			https://raw.githubusercontent.com/pkajan/PoE2-filter/refs/heads/main/GFoTA.filter
 #
 #
-#===============================================================================
-
-
-
+# ===============================================================================
 
 #===============================================================================
 # Section: Uniq
@@ -20,7 +18,7 @@
 
 # ===============================================================================
 Show
-	Rarity = Unique
+	Rarity Unique
 	SetTextColor 64 0 0 255
 	SetBackgroundColor 255 128 0 175
 	SetBorderColor 64 0 0 255
@@ -34,8 +32,8 @@ Show
 #===============================================================================
 
 Show
-	Rarity = Unique
-	Class = "Waystone"
+	Rarity Unique
+	Class "Waystone"
 	SetTextColor 255 255 255 255
 	SetBackgroundColor 14 186 255 240
 	SetBorderColor 255 40 0 255
@@ -45,7 +43,7 @@ Show
 	PlayEffect Blue 
 
 Show
-	Class = "Waystone" "Map Fragment" "Misc Map Item"
+	Class "Waystone" "Map Fragment" "Misc Map Item"
 	SetTextColor 255 255 255 255
 	SetBackgroundColor 14 186 255 240
 	SetFontSize 35
@@ -59,8 +57,8 @@ Show
 Show
 	AreaLevel < 10
 	ItemLevel < 8
-	Rarity = Magic
-	Class = "Boots" "Gloves" "Helmets" "Rings" "Amulets" "One Hand Axes" "Two Hand Axes" "One Hand Maces" "Two Hand Maces" "One Hand Swords" "Two Hand Swords" "Wands" "Claws" "Staves" "Belts" "Sceptres" "Shields" "Bows" "Daggers" "Quivers" "Body Armours" "Spear" "Crossbow" "Quarterstaff" "Buckler" "Focus" "Talismans"
+	Rarity Magic
+	Class "Boots" "Gloves" "Helmets" "Rings" "Amulets" "One Hand Axes" "Two Hand Axes" "One Hand Maces" "Two Hand Maces" "One Hand Swords" "Two Hand Swords" "Wands" "Claws" "Staves" "Belts" "Sceptres" "Shields" "Bows" "Daggers" "Quivers" "Body Armours" "Spear" "Crossbow" "Quarterstaff" "Buckler" "Focus" "Talismans"
 	SetBackgroundColor 138 132 132 63
 	SetBorderColor 184 218 242 255
 	SetFontSize 22
@@ -68,8 +66,8 @@ Show
 Show
 	AreaLevel < 10
 	ItemLevel < 6
-	Rarity = Normal
-	Class = "Boots" "Gloves" "Helmets" "Rings" "Amulets" "One Hand Axes" "Two Hand Axes" "One Hand Maces" "Two Hand Maces" "One Hand Swords" "Two Hand Swords" "Wands" "Claws" "Staves" "Belts" "Sceptres" "Shields" "Bows" "Daggers" "Quivers" "Body Armours" "Spear" "Crossbow" "Quarterstaff" "Buckler" "Focus" "Talismans"
+	Rarity Normal
+	Class "Boots" "Gloves" "Helmets" "Rings" "Amulets" "One Hand Axes" "Two Hand Axes" "One Hand Maces" "Two Hand Maces" "One Hand Swords" "Two Hand Swords" "Wands" "Claws" "Staves" "Belts" "Sceptres" "Shields" "Bows" "Daggers" "Quivers" "Body Armours" "Spear" "Crossbow" "Quarterstaff" "Buckler" "Focus" "Talismans"
 	SetBackgroundColor 138 132 132 63
 	SetBorderColor 184 218 242 255
 	SetFontSize 22
@@ -83,15 +81,15 @@ Show
 #-------------------------------------------------------------------------------
 
 Show
-	Class = "Stackable Currency"
-	BaseType = "Omen"
+	Class "Stackable Currency"
+	BaseType "Omen"
 	SetTextColor 42 42 42 255
 	SetBackgroundColor 254 128 128 240
 	MinimapIcon 2 Pink Circle
 
 Show
 	Class == "Stackable Currency"
-	BaseType = "Essence"
+	BaseType "Essence"
 	SetTextColor 175 96 37 255
 	SetBackgroundColor 0 0 0 240
 	SetBorderColor 136 136 255 255
@@ -99,7 +97,7 @@ Show
 
 Show
 	Class == "Augment"
-	BaseType = "Rune" "Soul Core"
+	BaseType "Rune" "Soul Core"
 	SetTextColor 175 96 37 255
 	SetBackgroundColor 0 0 0 240
 	SetBorderColor 136 136 255 255
@@ -119,8 +117,8 @@ Show
 #-------------------------------------------------------------------------------
 
 Show
-	Class = "Stackable Currency"
-	BaseType = "Runic Splinter" "Runic Splinter" "Exotic Coinage" "Runic Splinter" "Expedition Logbook" "Black Scythe Artifact" "Broken Circle Artifact" "Order Artifact" "Sun Artifact"
+	Class "Stackable Currency"
+	BaseType "Runic Splinter" "Runic Splinter" "Exotic Coinage" "Runic Splinter" "Expedition Logbook" "Black Scythe Artifact" "Broken Circle Artifact" "Order Artifact" "Sun Artifact"
 	SetTextColor 0 0 0 255
 	SetBackgroundColor 200 200 200 240
 	SetBorderColor 255 255 255 255
@@ -131,8 +129,8 @@ Show
 #-------------------------------------------------------------------------------
 
 Show
-	Class = "Stackable Currency"
-	BaseType = " Catalyst" " Splinter" "Tainted "
+	Class "Stackable Currency"
+	BaseType " Catalyst" " Splinter" "Tainted "
 	SetTextColor 180 96 0 255
 	SetBackgroundColor 254 191 128 240
 	SetBorderColor 98 128 0 255
@@ -140,7 +138,7 @@ Show
 	MinimapIcon 2 Brown Circle
 
 Show
-	Class = "Relics"
+	Class "Relics"
 	SetTextColor 180 96 0 255
 	SetBackgroundColor 254 191 128 240
 	SetBorderColor 98 128 0 255
@@ -160,7 +158,7 @@ Show
 	PlayEffect Cyan 
 
 Show
-	Class = "Gem"
+	Class "Gem"
 	SetBorderColor 255 215 0 255
 	SetFontSize 45
 	DisableDropSound
@@ -242,24 +240,24 @@ Show
 	PlayEffect Yellow Temp
 
 Show
-	Class = "Currency"
-	BaseType = "Scroll of Wisdom"
+	Class "Currency"
+	BaseType "Scroll of Wisdom"
 	SetBackgroundColor 0 0 0 240
 	SetBorderColor 100 50 30 255
 	AreaLevel >= 25
 	SetFontSize 20
 	
 Show
-	Class = "Currency"
-	BaseType = "Scroll of Wisdom"
+	Class "Currency"
+	BaseType "Scroll of Wisdom"
 	SetBackgroundColor 0 0 0 240
 	SetBorderColor 100 50 30 255
 	AreaLevel >= 15
 	SetFontSize 25
 	
 Show
-	Class = "Currency"
-	BaseType = "Scroll of Wisdom"
+	Class "Currency"
+	BaseType "Scroll of Wisdom"
 	SetBackgroundColor 0 0 0 240
 	SetBorderColor 100 50 30 255
 	SetFontSize 35
@@ -269,7 +267,7 @@ Show
 #-------------------------------------------------------------------------------
 
 Show
-	Class = "Instance Local Items" "Quest Items" "Quest"
+	Class "Instance Local Items" "Quest Items" "Quest"
 	SetBorderColor 0 191 0 255
 	SetFontSize 45
 	PlayAlertSound 12 80
@@ -286,21 +284,21 @@ Show
 
 Show
 	Rarity > Magic
-	Class = "Jewel"
+	Class "Jewel"
 	SetTextColor 210 0 0 255
 	SetBackgroundColor 255 215 0 240
 	MinimapIcon 1 Yellow Kite
 
 Show
 	Rarity <= Magic
-	Class = "Jewel"
+	Class "Jewel"
 	SetTextColor 210 0 0 255
 	SetBackgroundColor 184 218 242 240
 	SetBorderColor 0 128 0 255
 	SetFontSize 25
 
 Show
-	Class = "Charm"
+	Class "Charm"
 	SetTextColor 255 128 64 200
 	SetBackgroundColor 0 0 0 200
 	SetBorderColor 191 244 0 120
@@ -311,12 +309,12 @@ Show
 #-------------------------------------------------------------------------------
 
 Show
-	Sockets >= "1"
+	Sockets >= 1
 	Height <= 4
 	Width <= 2
 	SetTextColor 0 0 0 255
 	SetBackgroundColor 255 192 203 150
-	SetBorderColor 0 128 0 255
+	SetBorderColor 255 200 0
 	SetFontSize 25
 	DisableDropSound
 
@@ -357,16 +355,16 @@ Show
 
 Show
 	Quality > 1
-	Class = "Flask"
+	Class "Flask"
 	SetTextColor 200 200 200 200
 	SetBackgroundColor 0 100 150 200
 	SetBorderColor 255 215 0 150
 	SetFontSize 30
 
 Show
-	Quality = 0
-	Class = "Mana Flask" "Life Flask"
-	BaseType = "Ultimate"
+	Quality 0
+	Class "Mana Flask" "Life Flask"
+	BaseType "Ultimate"
 	SetTextColor 200 200 200 100
 	SetBackgroundColor 0 100 150 100
 	SetBorderColor 127 127 127 100
@@ -374,9 +372,9 @@ Show
 
 Show
 	AreaLevel <= 1
-	Quality = 0
-	Class = "Mana Flask" "Life Flask"
-	BaseType = "Lesser"
+	Quality 0
+	Class "Mana Flask" "Life Flask"
+	BaseType "Lesser"
 	SetTextColor 200 200 200 175
 	SetBackgroundColor 0 100 150 175
 	SetBorderColor 127 127 127 175
@@ -384,9 +382,9 @@ Show
 
 Show
 	AreaLevel <= 10
-	Quality = 0
-	Class = "Mana Flask" "Life Flask"
-	BaseType = "Medium"
+	Quality 0
+	Class "Mana Flask" "Life Flask"
+	BaseType "Medium"
 	SetTextColor 200 200 200 175
 	SetBackgroundColor 0 100 150 175
 	SetBorderColor 127 127 127 175
@@ -394,9 +392,9 @@ Show
 
 Show
 	AreaLevel <= 15
-	Quality = 0
-	Class = "Mana Flask" "Life Flask"
-	BaseType = "Greater"
+	Quality 0
+	Class "Mana Flask" "Life Flask"
+	BaseType "Greater"
 	SetTextColor 200 200 200 175
 	SetBackgroundColor 0 100 150 175
 	SetBorderColor 127 127 127 175
@@ -404,9 +402,9 @@ Show
 
 Show
 	AreaLevel <= 20
-	Quality = 0
-	Class = "Mana Flask" "Life Flask"
-	BaseType = "Grand"
+	Quality 0
+	Class "Mana Flask" "Life Flask"
+	BaseType "Grand"
 	SetTextColor 200 200 200 175
 	SetBackgroundColor 0 100 150 175
 	SetBorderColor 127 127 127 175
@@ -414,18 +412,18 @@ Show
 
 Show
 	AreaLevel <= 25
-	Quality = 0
-	Class = "Mana Flask" "Life Flask"
-	BaseType = "Giant"
+	Quality 0
+	Class "Mana Flask" "Life Flask"
+	BaseType "Giant"
 	SetTextColor 200 200 200 175
 	SetBackgroundColor 0 100 150 175
 	SetBorderColor 127 127 127 175
 	SetFontSize 18
 Show
 	AreaLevel <= 35
-	Quality = 0
-	Class = "Mana Flask" "Life Flask"
-	BaseType = "Colossal"
+	Quality 0
+	Class "Mana Flask" "Life Flask"
+	BaseType "Colossal"
 	SetTextColor 200 200 200 175
 	SetBackgroundColor 0 100 150 175
 	SetBorderColor 127 127 127 175
@@ -433,9 +431,9 @@ Show
 
 Show
 	AreaLevel <= 45
-	Quality = 0
-	Class = "Mana Flask" "Life Flask"
-	BaseType = "Gargantuan"
+	Quality 0
+	Class "Mana Flask" "Life Flask"
+	BaseType "Gargantuan"
 	SetTextColor 200 200 200 175
 	SetBackgroundColor 0 100 150 175
 	SetBorderColor 127 127 127 175
@@ -443,9 +441,9 @@ Show
 
 Show
 	AreaLevel <= 55
-	Quality = 0
-	Class = "Mana Flask" "Life Flask"
-	BaseType = "Transcendent"
+	Quality 0
+	Class "Mana Flask" "Life Flask"
+	BaseType "Transcendent"
 	SetTextColor 200 200 200 175
 	SetBackgroundColor 0 100 150 175
 	SetBorderColor 127 127 127 175
@@ -453,16 +451,16 @@ Show
 
 Show
 	AreaLevel <= 60
-	Quality = 0
-	Class = "Mana Flask" "Life Flask"
-	BaseType = "Ultimate"
+	Quality 0
+	Class "Mana Flask" "Life Flask"
+	BaseType "Ultimate"
 	SetTextColor 200 200 200 175
 	SetBackgroundColor 0 100 150 175
 	SetBorderColor 127 127 127 175
 	SetFontSize 18
 
 Hide
-	Class = "Life Flask" "Mana Flask"
+	Class "Life Flask" "Mana Flask"
 	SetTextColor 200 200 200 100
 	SetBackgroundColor 0 100 150 100
 	SetBorderColor 127 127 127 100
@@ -473,8 +471,8 @@ Hide
 #-------------------------------------------------------------------------------
 
 Show
-	StackSize >= 500
 	BaseType == "Gold"
+	StackSize >= 500
 	SetTextColor 0 0 0 255
 	SetBackgroundColor 255 215 0 240
 	SetBorderColor 180 96 0 255
@@ -483,8 +481,8 @@ Show
 	PlayEffect Yellow 
 
 Show
-	StackSize >= 250
 	BaseType == "Gold"
+	StackSize >= 250
 	SetTextColor 0 0 0 255
 	SetBackgroundColor 255 215 0 240
 	SetBorderColor 180 96 0 255
@@ -493,8 +491,8 @@ Show
 	PlayEffect Yellow 
 
 Show
-	StackSize >= 50
 	BaseType == "Gold"
+	StackSize >= 50
 	SetTextColor 0 0 0 255
 	SetBackgroundColor 255 215 0 240
 	SetBorderColor 180 96 0 255
@@ -503,8 +501,8 @@ Show
 	PlayEffect Yellow 
 
 Show
-	StackSize >= 1
 	BaseType == "Gold"
+	StackSize >= 1
 	SetTextColor 0 0 0 255
 	SetBackgroundColor 255 215 0 240
 	SetBorderColor 180 96 0 255
@@ -518,7 +516,7 @@ Show
 Show
 	UnidentifiedItemTier >= 2
 	Rarity >= Magic
-	Class = "Boots" "Gloves" "Helmets" "Body Armours" "One Hand Axes" "Two Hand Axes" "One Hand Maces" "Two Hand Maces" "One Hand Swords" "Two Hand Swords" "Wands" "Claws" "Staves" "Sceptres" "Shields" "Bows" "Daggers" "Quivers" "Spear" "Crossbow" "Quarterstaff" "Buckler" "Focus"
+	Class "Boots" "Gloves" "Helmets" "Body Armours" "One Hand Axes" "Two Hand Axes" "One Hand Maces" "Two Hand Maces" "One Hand Swords" "Two Hand Swords" "Wands" "Claws" "Staves" "Sceptres" "Shields" "Bows" "Daggers" "Quivers" "Spear" "Crossbow" "Quarterstaff" "Buckler" "Focus"
 	SetTextColor 255 255 255 255
 	SetBorderColor 0 191 255 255
 	SetFontSize 28
@@ -527,21 +525,21 @@ Show
 Show
 	ItemLevel >= 82
 	Rarity >= Magic
-	Class = "Boots" "Gloves" "Helmets" "Body Armours" "One Hand Axes" "Two Hand Axes" "One Hand Maces" "Two Hand Maces" "One Hand Swords" "Two Hand Swords" "Wands" "Claws" "Staves" "Sceptres" "Shields" "Bows" "Daggers" "Quivers" "Spear" "Crossbow" "Quarterstaff" "Buckler" "Focus"
+	Class "Boots" "Gloves" "Helmets" "Body Armours" "One Hand Axes" "Two Hand Axes" "One Hand Maces" "Two Hand Maces" "One Hand Swords" "Two Hand Swords" "Wands" "Claws" "Staves" "Sceptres" "Shields" "Bows" "Daggers" "Quivers" "Spear" "Crossbow" "Quarterstaff" "Buckler" "Focus"
 	SetTextColor 255 255 255 255
 	SetBorderColor 0 191 255 255
 	SetFontSize 28
 
 # 2. Top-tier Rare items (Expert bases only, hides low-tier junk)
 Show
-	Rarity = Rare
+	Rarity Rare
 	SetBackgroundColor 0 0 0 200
 	SetBorderColor 180 96 0 255
 	SetFontSize 26
 
 # 3. High-level Rare jewelry (Rings, Amulets, Belts don't have "Expert" prefix)
 Show
-	Rarity = Rare
+	Rarity Rare
 	Class "Rings" "Amulets" "Belts"
 	ItemLevel >= 75
 	SetBackgroundColor 0 0 0 200
@@ -550,15 +548,15 @@ Show
 
 # 4. Hide low-tier Rare items that are not Expert bases
 Hide
-	Rarity = Rare
-	Class = "Bows" "Bucklers" "Crossbows" "Foci" "Quarterstaves" "One Hand Axes" "Two Hand Axes" "One Hand Maces" "Two Hand Maces" "One Hand Swords" "Two Hand Swords" "Wands" "Claws" "Staves" "Sceptres" "Shields"  "Daggers" "Quivers" "Spears" "Crossbow" "Quarterstaff" "Buckler" "Focus" "Talismans" "Body Armours" "Boots" "Gloves" "Helmets"
+	Rarity Rare
+	Class "Bows" "Bucklers" "Crossbows" "Foci" "Quarterstaves" "One Hand Axes" "Two Hand Axes" "One Hand Maces" "Two Hand Maces" "One Hand Swords" "Two Hand Swords" "Wands" "Claws" "Staves" "Sceptres" "Shields"  "Daggers" "Quivers" "Spears" "Crossbow" "Quarterstaff" "Buckler" "Focus" "Talismans" "Body Armours" "Boots" "Gloves" "Helmets"
 
 #-------------------------------------------------------------------------------
 # Subsection: Yellow & Blue & White
 #-------------------------------------------------------------------------------
 
 Show
-	Rarity = Rare
+	Rarity Rare
 	SetBackgroundColor 0 0 0 175
 	SetFontSize 20
 	SetBorderColor 180 96 0 255
@@ -566,19 +564,19 @@ Show
 
 Hide
 	Rarity <= Magic
-	Class = "Bows" "Bucklers" "Crossbows" "Foci" "Quarterstaves" "One Hand Axes" "Two Hand Axes" "One Hand Maces" "Two Hand Maces" "One Hand Swords" "Two Hand Swords" "Wands" "Claws" "Staves" "Sceptres" "Shields"  "Daggers" "Quivers" "Spears" "Crossbow" "Quarterstaff" "Buckler" "Focus" "Talismans"
+	Class "Bows" "Bucklers" "Crossbows" "Foci" "Quarterstaves" "One Hand Axes" "Two Hand Axes" "One Hand Maces" "Two Hand Maces" "One Hand Swords" "Two Hand Swords" "Wands" "Claws" "Staves" "Sceptres" "Shields"  "Daggers" "Quivers" "Spears" "Crossbow" "Quarterstaff" "Buckler" "Focus" "Talismans"
 	SetFontSize 18
 	DisableDropSound
 
 Hide
 	Rarity <= Magic
-	Class = "Body Armours" "Boots" "Gloves" "Helmets" 
+	Class "Body Armours" "Boots" "Gloves" "Helmets" 
 	SetFontSize 18
 	DisableDropSound
 
 Hide
 	Rarity <= Magic
-	Class = "Rings" "Amulets" "Belts"
+	Class "Rings" "Amulets" "Belts"
 	SetFontSize 18
 	DisableDropSound
 
@@ -595,7 +593,7 @@ Show
 	PlayEffect White Temp
 
 Show
-	Class = "Currency"
+	Class "Currency"
 	SetTextColor 0 0 0 255
 	SetBackgroundColor 254 191 128 240
 	SetBorderColor 180 96 0 255
@@ -609,4 +607,3 @@ Show
 	PlayAlertSound 16 80
 	MinimapIcon 0 Red Circle
 	PlayEffect Red 
-	
