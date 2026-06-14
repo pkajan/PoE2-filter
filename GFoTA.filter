@@ -1,10 +1,10 @@
-
+# Script edited with Filtration - https://github.com/eugenikus8/Filtration-Fork
 #===============================================================================
 # GREATEST FILTER OF THEM ALL
 #===============================================================================
 #
 # NAME:			Greatest Filter of Them All
-# VERSION:		3.07
+# VERSION:		3.08
 # AUTHOR:		pKajan
 # CONTACT:		https://github.com/pkajan/PoE2-filter/
 # LINK:			https://raw.githubusercontent.com/pkajan/PoE2-filter/refs/heads/main/GFoTA.filter
@@ -314,7 +314,7 @@ Show
 	Width <= 2
 	SetTextColor 0 0 0 255
 	SetBackgroundColor 255 192 203 150
-	SetBorderColor 255 200 0
+	SetBorderColor 150 0 0
 	SetFontSize 25
 	DisableDropSound
 
@@ -323,8 +323,8 @@ Show
 	Height <= 4
 	Width <= 2
 	SetTextColor 0 0 0 255
-	SetBackgroundColor 255 192 203 150
-	SetBorderColor 0 128 0 255
+	SetBackgroundColor 255 177 169
+	SetBorderColor 30 144 255
 	SetFontSize 25
 	DisableDropSound
 
