@@ -1,15 +1,15 @@
 # Script edited with Filtration - https://github.com/eugenikus8/Filtration-Fork
-#===============================================================================
+# ===============================================================================
 # GREATEST FILTER OF THEM ALL
-#===============================================================================
-#
-# NAME:			Greatest Filter of Them All
-# VERSION:		3.08
-# AUTHOR:		pKajan
-# CONTACT:		https://github.com/pkajan/PoE2-filter/
-# LINK:			https://raw.githubusercontent.com/pkajan/PoE2-filter/refs/heads/main/GFoTA.filter
-#
-#
+# ===============================================================================
+# 
+# NAME:Greatest Filter of Them All
+# VERSION:3.09
+# AUTHOR:pKajan
+# CONTACT:https://github.com/pkajan/PoE2-filter/
+# LINK:https://raw.githubusercontent.com/pkajan/PoE2-filter/refs/heads/main/GFoTA.filter
+# 
+# 
 # ===============================================================================
 
 #===============================================================================
@@ -81,11 +81,12 @@ Show
 #-------------------------------------------------------------------------------
 
 Show
-	Class "Stackable Currency"
-	BaseType "Omen"
-	SetTextColor 42 42 42 255
-	SetBackgroundColor 254 128 128 240
-	MinimapIcon 2 Pink Circle
+    Class "Stackable Currency"
+    BaseType "Omen"
+    SetTextColor 42 42 42 255
+    SetBackgroundColor 254 128 128
+    SetBorderColor 210 0 0
+    MinimapIcon 2 Pink Circle
 
 Show
 	Class == "Stackable Currency"
@@ -246,7 +247,7 @@ Show
 	SetBorderColor 100 50 30 255
 	AreaLevel >= 25
 	SetFontSize 20
-	
+
 Show
 	Class "Currency"
 	BaseType "Scroll of Wisdom"
@@ -254,7 +255,7 @@ Show
 	SetBorderColor 100 50 30 255
 	AreaLevel >= 15
 	SetFontSize 25
-	
+
 Show
 	Class "Currency"
 	BaseType "Scroll of Wisdom"
@@ -309,24 +310,70 @@ Show
 #-------------------------------------------------------------------------------
 
 Show
-	Sockets >= 1
-	Height <= 4
-	Width <= 2
-	SetTextColor 0 0 0 255
-	SetBackgroundColor 255 192 203 150
-	SetBorderColor 150 0 0
-	SetFontSize 25
-	DisableDropSound
+    Rarity = Rare
+    Sockets >= 1
+    Height <= 4
+    Width <= 2
+    SetTextColor 255 255 119
+    SetBackgroundColor 50 230 100 100
+    SetBorderColor 255 215 0
+    SetFontSize 25
+    DisableDropSound
 
 Show
-	Quality >= 1
-	Height <= 4
-	Width <= 2
-	SetTextColor 0 0 0 255
-	SetBackgroundColor 255 177 169
-	SetBorderColor 30 144 255
-	SetFontSize 25
-	DisableDropSound
+    Rarity = Magic
+    Sockets >= 1
+    Height <= 4
+    Width <= 2
+    SetTextColor 255 255 119
+    SetBackgroundColor 50 230 100 100
+    SetBorderColor 30 144 255
+    SetFontSize 25
+    DisableDropSound
+
+Show
+    Rarity = Normal
+    Sockets >= 1
+    Height <= 4
+    Width <= 2
+    SetTextColor 255 255 119
+    SetBackgroundColor 50 230 100 100
+    SetBorderColor 255 255 255
+    SetFontSize 25
+    DisableDropSound
+
+Show
+    Rarity = Rare
+    Quality >= 1
+    Height <= 4
+    Width <= 2
+    SetTextColor 0 0 0 255
+    SetBackgroundColor 255 177 169 100
+    SetBorderColor 255 200 0
+    SetFontSize 25
+    DisableDropSound
+
+Show
+    Rarity = Magic
+    Quality >= 1
+    Height <= 4
+    Width <= 2
+    SetTextColor 0 0 0 255
+    SetBackgroundColor 255 177 169 100
+    SetBorderColor 30 144 255
+    SetFontSize 25
+    DisableDropSound
+
+Show
+    Rarity = Normal
+    Quality >= 1
+    Height <= 4
+    Width <= 2
+    SetTextColor 0 0 0 255
+    SetBackgroundColor 255 177 169 100
+    SetBorderColor 255 255 255
+    SetFontSize 25
+    DisableDropSound
 
 Show
 	Class == "Augment"
@@ -419,6 +466,7 @@ Show
 	SetBackgroundColor 0 100 150 175
 	SetBorderColor 127 127 127 175
 	SetFontSize 18
+
 Show
 	AreaLevel <= 35
 	Quality 0
@@ -512,6 +560,7 @@ Show
 #-------------------------------------------------------------------------------
 # Subsection: Endgame Expert Bases (Crafting & High iLvl)
 #-------------------------------------------------------------------------------
+
 # 0. tier Item
 Show
     UnidentifiedItemTier >= 2
@@ -527,7 +576,6 @@ Show
     SetBorderColor 0 191 255 255
     SetFontSize 28
 
-
 # 1. High-tier Normal and Magic bases for crafting (High Item Level)
 Show
 	ItemLevel >= 82
@@ -537,13 +585,6 @@ Show
 	SetBorderColor 0 191 255 255
 	SetFontSize 28
 
-# 2. Top-tier Rare items (Expert bases only, hides low-tier junk)
-Show
-	Rarity Rare
-	SetBackgroundColor 0 0 0 200
-	SetBorderColor 180 96 0 255
-	SetFontSize 26
-
 # 3. High-level Rare jewelry (Rings, Amulets, Belts don't have "Expert" prefix)
 Show
 	Rarity Rare
@@ -551,6 +592,13 @@ Show
 	ItemLevel >= 75
 	SetBackgroundColor 0 0 0 200
 	SetBorderColor 255 165 0 255
+	SetFontSize 26
+
+# 2. Top-tier Rare items (Expert bases only, hides low-tier junk)
+Show
+	Rarity Rare
+	SetBackgroundColor 0 0 0 200
+	SetBorderColor 180 96 0 255
 	SetFontSize 26
 
 # 4. Hide low-tier Rare items that are not Expert bases
@@ -614,3 +662,4 @@ Show
 	PlayAlertSound 16 80
 	MinimapIcon 0 Red Circle
 	PlayEffect Red 
+
