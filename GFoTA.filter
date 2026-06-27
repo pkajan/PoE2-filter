@@ -4,7 +4,7 @@
 # ===============================================================================
 # 
 # NAME:Greatest Filter of Them All
-# VERSION:3.09
+# VERSION:3.10
 # AUTHOR:pKajan
 # CONTACT:https://github.com/pkajan/PoE2-filter/
 # LINK:https://raw.githubusercontent.com/pkajan/PoE2-filter/refs/heads/main/GFoTA.filter
@@ -556,6 +556,18 @@ Show
 	SetBorderColor 180 96 0 255
 	SetFontSize 17
 	PlayEffect Yellow 
+
+#-------------------------------------------------------------------------------
+# Subsection: Chance-able
+#-------------------------------------------------------------------------------
+
+Show
+    Rarity = Normal
+    BaseType "Heavy Belt"
+    SetBackgroundColor 0 0 0 200
+    SetBorderColor 180 96 0 255
+    SetFontSize 45
+    MinimapIcon 0 Red Star
 
 #-------------------------------------------------------------------------------
 # Subsection: Endgame Expert Bases (Crafting & High iLvl)
