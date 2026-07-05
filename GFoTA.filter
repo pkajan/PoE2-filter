@@ -4,7 +4,7 @@
 # ===============================================================================
 # 
 # NAME:Greatest Filter of Them All
-# VERSION:3.10
+# VERSION:3.11
 # AUTHOR:pKajan
 # CONTACT:https://github.com/pkajan/PoE2-filter/
 # LINK:https://raw.githubusercontent.com/pkajan/PoE2-filter/refs/heads/main/GFoTA.filter
@@ -26,6 +26,19 @@ Show
 	PlayAlertSound 1 80
 	MinimapIcon 0 Brown Star
 	PlayEffect Orange 
+
+#-------------------------------------------------------------------------------
+# Subsection: Chance-able
+#-------------------------------------------------------------------------------
+
+Show
+    Rarity = Normal
+    BaseType "Heavy Belt" "Stellar Amulet"
+    SetBackgroundColor 0 0 0 200
+    SetBorderColor 180 96 0 255
+    SetFontSize 45
+    MinimapIcon 0 Red Star
+    PlayEffect Brown
 
 #===============================================================================
 # Section: Maps
@@ -519,6 +532,27 @@ Hide
 #-------------------------------------------------------------------------------
 
 Show
+    AreaLevel >= 65
+    BaseType "==" "Gold"
+    StackSize >= 1000
+    SetTextColor 0 0 0 255
+    SetBackgroundColor 255 215 0
+    SetBorderColor 180 96 0 255
+    SetFontSize 30
+    MinimapIcon 0 Yellow Moon
+    PlayEffect Yellow
+
+Show
+    AreaLevel >= 65
+    BaseType "==" "Gold"
+    StackSize < 1000
+    SetTextColor 0 0 0 255
+    SetBackgroundColor 255 215 0
+    SetBorderColor 180 96 0 255
+    SetFontSize 20
+    PlayEffect Yellow
+
+Show
 	BaseType == "Gold"
 	StackSize >= 500
 	SetTextColor 0 0 0 255
@@ -556,18 +590,6 @@ Show
 	SetBorderColor 180 96 0 255
 	SetFontSize 17
 	PlayEffect Yellow 
-
-#-------------------------------------------------------------------------------
-# Subsection: Chance-able
-#-------------------------------------------------------------------------------
-
-Show
-    Rarity = Normal
-    BaseType "Heavy Belt"
-    SetBackgroundColor 0 0 0 200
-    SetBorderColor 180 96 0 255
-    SetFontSize 45
-    MinimapIcon 0 Red Star
 
 #-------------------------------------------------------------------------------
 # Subsection: Endgame Expert Bases (Crafting & High iLvl)
