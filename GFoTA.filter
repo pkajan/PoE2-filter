@@ -4,7 +4,7 @@
 # ===============================================================================
 # 
 # NAME:Greatest Filter of Them All
-# VERSION:3.11
+# VERSION:3.12
 # AUTHOR:pKajan
 # CONTACT:https://github.com/pkajan/PoE2-filter/
 # LINK:https://raw.githubusercontent.com/pkajan/PoE2-filter/refs/heads/main/GFoTA.filter
@@ -102,7 +102,7 @@ Show
     MinimapIcon 2 Pink Circle
 
 Show
-	Class == "Stackable Currency"
+	Class "Stackable Currency"
 	BaseType "Essence"
 	SetTextColor 175 96 37 255
 	SetBackgroundColor 0 0 0 240
@@ -118,6 +118,7 @@ Show
 	MinimapIcon 2 Purple Cross
 
 Show
+	Class "Trial Coins"
 	BaseType == "Djinn Barya"
 	SetTextColor 215 0 107 255
 	SetBorderColor 0 255 64 255
@@ -133,6 +134,13 @@ Show
 Show
 	Class "Stackable Currency"
 	BaseType "Runic Splinter" "Runic Splinter" "Exotic Coinage" "Runic Splinter" "Expedition Logbook" "Black Scythe Artifact" "Broken Circle Artifact" "Order Artifact" "Sun Artifact"
+	SetTextColor 0 0 0 255
+	SetBackgroundColor 200 200 200 240
+	SetBorderColor 255 255 255 255
+	MinimapIcon 2 White Circle
+
+Show
+	Class "Tablet"
 	SetTextColor 0 0 0 255
 	SetBackgroundColor 200 200 200 240
 	SetBorderColor 255 255 255 255
@@ -159,12 +167,21 @@ Show
 	SetFontSize 40
 	MinimapIcon 2 Brown Circle
 
+Show
+	Class "Inscribed Ultimatum"
+	SetTextColor 180 96 0 255
+	SetBackgroundColor 254 191 128 240
+	SetBorderColor 98 128 0 255
+	SetFontSize 40
+	MinimapIcon 2 Brown Circle
+
+
 #-------------------------------------------------------------------------------
 # Subsection: Gems
 #-------------------------------------------------------------------------------
 
 Show
-	Class == "Skill Gems" "Support Gems"
+	Class "Uncut Support Gems" "Uncut Spirit Gems" "Uncut Skill Gems"
 	SetTextColor 20 240 240 255
 	SetBorderColor 255 255 0 255
 	SetFontSize 45
@@ -183,7 +200,7 @@ Show
 #-------------------------------------------------------------------------------
 
 Show
-	Class == "Stackable Currency"
+	Class "Stackable Currency"
 	BaseType == "Albino Rhoa Feather" "Ancient Collarbone" "Ancient Jawbone" "Ancient Rib" "Divine Orb" "Hinekora's Lock" "Mirror of Kalandra" "Perfect Chaos Orb" "Perfect Exalted Orb" "Perfect Jeweller's Orb"
 	SetTextColor 255 0 0 255
 	SetBackgroundColor 255 255 255 255
@@ -194,7 +211,7 @@ Show
 	PlayEffect Red 
 
 Show
-	Class == "Stackable Currency"
+	Class "Stackable Currency"
 	BaseType == "Fracturing Orb" "Orb of Annulment" "Perfect Regal Orb" "Preserved Collarbone"
 	SetTextColor 0 0 0 255
 	SetBackgroundColor 245 105 90 255
@@ -205,7 +222,7 @@ Show
 	PlayEffect Red 
 
 Show
-	Class == "Stackable Currency"
+	Class "Stackable Currency"
 	BaseType == "Chaos Orb" "Greater Chaos Orb" "Greater Exalted Orb" "Greater Regal Orb" "Orb of Chance" "Preserved Cranium" "Preserved Rib"
 	SetTextColor 245 105 90 255
 	SetBorderColor 245 105 90 255
@@ -215,7 +232,7 @@ Show
 	PlayEffect Yellow 
 
 Show
-	Class == "Stackable Currency"
+	Class "Stackable Currency"
 	BaseType == "Exalted Orb" "Gemcutter's Prism" "Gnawed Collarbone" "Gnawed Jawbone" "Gnawed Rib" "Greater Jeweller's Orb" "Perfect Orb of Augmentation" "Perfect Orb of Transmutation" "Preserved Jawbone" "Preserved Vertebrae"
 	SetTextColor 245 139 87 255
 	SetBorderColor 245 139 87 255
@@ -225,7 +242,7 @@ Show
 	PlayEffect White 
 
 Show
-	Class == "Stackable Currency"
+	Class "Stackable Currency"
 	BaseType == "Armourer's Scrap" "Artificer's Orb" "Chance Shard" "Glassblower's Bauble" "Greater Orb of Augmentation" "Greater Orb of Transmutation" "Orb of Alchemy" "Regal Orb" "Vaal Orb"
 	SetTextColor 240 180 100 255
 	SetBorderColor 240 180 100 255
@@ -235,7 +252,7 @@ Show
 	PlayEffect White 
 
 Show
-	Class == "Stackable Currency"
+	Class "Stackable Currency"
 	BaseType == "Arcanist's Etcher" "Blacksmith's Whetstone" "Lesser Jeweller's Orb"
 	SetTextColor 220 175 132 255
 	SetBorderColor 220 175 132 255
@@ -244,7 +261,7 @@ Show
 	PlayEffect White Temp
 
 Show
-	Class == "Stackable Currency"
+	Class "Stackable Currency"
 	BaseType == "Black Scythe Artifact" "Broken Circle Artifact" "Exotic Coinage" "Order Artifact" "Sun Artifact"
 	SetTextColor 240 180 100 255
 	SetBorderColor 240 180 100 255
@@ -533,7 +550,7 @@ Hide
 
 Show
     AreaLevel >= 65
-    BaseType "==" "Gold"
+    BaseType "Gold"
     StackSize >= 1000
     SetTextColor 0 0 0 255
     SetBackgroundColor 255 215 0
@@ -544,8 +561,19 @@ Show
 
 Show
     AreaLevel >= 65
-    BaseType "==" "Gold"
+    BaseType "Gold"
     StackSize < 1000
+    StackSize > 100
+    SetTextColor 0 0 0 255
+    SetBackgroundColor 255 215 0
+    SetBorderColor 180 96 0 255
+    SetFontSize 20
+    PlayEffect Yellow
+
+Hide
+    AreaLevel >= 65
+    BaseType "Gold"
+    StackSize < 100
     SetTextColor 0 0 0 255
     SetBackgroundColor 255 215 0
     SetBorderColor 180 96 0 255
@@ -553,7 +581,7 @@ Show
     PlayEffect Yellow
 
 Show
-	BaseType == "Gold"
+	BaseType "Gold"
 	StackSize >= 500
 	SetTextColor 0 0 0 255
 	SetBackgroundColor 255 215 0 240
@@ -563,7 +591,7 @@ Show
 	PlayEffect Yellow 
 
 Show
-	BaseType == "Gold"
+	BaseType "Gold"
 	StackSize >= 250
 	SetTextColor 0 0 0 255
 	SetBackgroundColor 255 215 0 240
@@ -573,7 +601,7 @@ Show
 	PlayEffect Yellow 
 
 Show
-	BaseType == "Gold"
+	BaseType "Gold"
 	StackSize >= 50
 	SetTextColor 0 0 0 255
 	SetBackgroundColor 255 215 0 240
@@ -583,7 +611,7 @@ Show
 	PlayEffect Yellow 
 
 Show
-	BaseType == "Gold"
+	BaseType "Gold"
 	StackSize >= 1
 	SetTextColor 0 0 0 255
 	SetBackgroundColor 255 215 0 240
